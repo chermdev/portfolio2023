@@ -61,7 +61,7 @@ function NavbarLogo() {
         <div>
             <a href="/">
                 <div className='flex flex-row items-center gap-2'>
-                    <h2 className="text-xl font-bold text-[var(--font-color)]">chermdev
+                    <h2 className="text-sm sm:text-xl font-bold text-[var(--font-color)]">chermdev
                     </h2>
                     {/* <div className='flex items-center justify-start gap-1 text-xs leading-3'>
                         <Python className='w-6 h-6' alt="Python">

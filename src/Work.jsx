@@ -40,7 +40,7 @@ function TechnologyTag({ children, name }) {
     let colorStyle = (name in colors) ? colors[name].colorStyle : ""
 
     return (
-        <span className={`${colorStyle} border flex items-center justify-center bg-opacity-10 dark:bg-opacity-10 px-3 py-1 rounded-md`}>{children}</span>
+        <span className={`${colorStyle} text-xs sm:text-sm border flex items-center justify-center bg-opacity-10 dark:bg-opacity-10 px-3 py-1 rounded-md`}>{children}</span>
     )
 }
 
@@ -53,22 +53,22 @@ function WorkCard({ timeStr,
     active = false
 }) {
     return (
-        <li className={`mb-10 ml-20 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
+        <li className={`mb-10 ml-2 md:ml-20 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
             {(active) ?
                 (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-lime-500 animation-pulse"></div>) :
                 (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
             }
-            <div className='flex gap-2 items-center mb-1'>
-                <time className={`text-sm font-normal leading-none ${(active) ? "text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
+            <div className='flex gap-2 items-center mb-4 md:mb-2'>
+                <time className={`text-xs sm:text-sm font-normal leading-none ${(active) ? "text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
                 {companyLogo}
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{role}</h3>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{description}</p>
+            <h3 className="text-sm sm:text-lg font-semibold text-gray-900 dark:text-white">{role}</h3>
+            <p className={`mb-4 text-xs sm:text-base font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
             {
                 (tasks.length > 0) &&
                 <div>
-                    <h3 className='mb-2 text-lg text-gray-900 dark:text-white'>Tasks</h3>
-                    <ul className='max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+                    <h3 className='mb-2 font-semibold text-sm sm:text-lg text-gray-900 dark:text-white'>Tasks</h3>
+                    <ul className={`text-xs sm:text-base max-w-md  list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
                         {tasks.map((task, index) =>
                             <li
                                 key={index}>
@@ -80,7 +80,7 @@ function WorkCard({ timeStr,
             }
             {
                 (technologies.length > 0) &&
-                <ul className='mt-2 flex gap-4 flex-wrap' >
+                <ul className='mt-6 flex gap-2 flex-wrap' >
                     {technologies.map((technology, index) =>
                         <TechnologyTag
                             key={index}
@@ -139,11 +139,11 @@ function Work() {
     return (
         <Section id="work">
             <div className='flex justify-center items-center flex-col xl:flex-row xl:items-start gap-20 xl:gap-0'>
-                <div className='h-full xl:max-w-[50%] mr-20'>
-                    <h1 className='text-3xl font-bold mb-5'>Work Experience</h1>
-                    <p className='break-normal text-justify'>awddd dddwwww wwwww www www wwwwwwwwww wwwwwwww wwwwwww wwawddddddww  wwwwww wwww wwww ww wwwwwww wwwwww wwww wwwww wwawdddd ddwwwwww w wwwwwwwwwwww wwwwwww wwwww ww wwwwww wwwawddddddwwwwwww wwwwwww ww wwwwww wwwwww wwwwwww wwwwwwwawddddddw wwwwww wwww wwwwwwww wwwww wwwwww wwwww ww wwwwwa wddddddwwwwwwwwwwww wwwwww wwwwww wwwwwww wwwwww wwwwwawdd ddddwwwww ww wwwww wwwww wwwwwwwwww wwwwww wwwwww www</p>
+                <div className='xl:mr-20'>
+                    <h1 className='text-xl md:text-3xl font-bold mb-5'>Work Experience</h1>
+                    <p className='text-xs sm:text-sm md:text-base break-normal text-justify'>awddd dddwwww wwwww www www wwwwwwwwww wwwwwwww wwwwwww wwawddddddww  wwwwww wwww wwww ww wwwwwww wwwwww wwww wwwww wwawdddd ddwwwwww w wwwwwwwwwwww wwwwwww wwwww ww wwwwww wwwawddddddwwwwwww wwwwwww ww wwwwww wwwwww wwwwwww wwwwwwwawddddddw wwwwww wwww wwwwwwww wwwww wwwwww wwwww ww wwwwwa wddddddwwwwwwwwwwww wwwwww wwwwww wwwwwww wwwwww wwwwwawdd ddddwwwww ww wwwww wwwww wwwwwwwwww wwwwww wwwwww www</p>
                 </div>
-                <div className='flex justify-center xl:justify-start xl:min-w-[50%]'>
+                <div className='max-w-full flex justify-center xl:justify-start xl:min-w-[50%]'>
                     <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">
                         {workExpList.map(job =>
                             <WorkCard

@@ -38,10 +38,8 @@ function ToggleButton() {
             title="Toggle Theme"
             onClick={toggleDarkMode}
             className={`
-            w-6
-            h-3.5
-            sm:w-12
-            sm:h-7 
+            w-10
+            h-5
             rounded-full 
             dark:bg-white
             bg-[rgb(25,25,25)]
@@ -60,18 +58,13 @@ function ToggleButton() {
                 className={`
             absolute
             rounded-full
-            w-2.5
-            h-2.5
-            sm:w-5 
-            sm:h-5
-            top-0.5
-            ml-0.5
-            sm:top-1
-            sm:ml-1
+            w-[1.125rem]
+            h-[1.125rem]
+            top-[0.0625rem]
+            ml-[0.0625rem]
             bg-white
             dark:bg-[rgb(25,25,25)]
-            dark:ml-3
-            dark:sm:ml-6
+            dark:ml-[1.3125rem]
             pointer-events-none 
             transition-all 
             duration-300 

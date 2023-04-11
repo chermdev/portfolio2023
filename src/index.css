@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+}
+
+:root {
+  --bg-color: white;
+  --bg-navbar-color: rgb(250, 250, 250, 0.5);
+  --font-color: rgb(20, 20, 20);
+  --card-color: rgb(234, 234, 234);
+
+  --bg-color: rgb(20, 20, 20);
+  --bg-navbar-color: rgb(25, 25, 25, 0.5);
+  --font-color: rgb(255, 255, 255);
+  --card-color: rgb(23, 23, 23);
+
+  --max-page-width: 80rem;
+  --page-width: 86%;
+  margin: auto;
+  font-family: 'Outfit', system-ui, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#root {
+  display: grid;
+  place-items: center;
+}
+
+a {
+  text-decoration: none;
+}

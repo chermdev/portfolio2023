@@ -38,17 +38,19 @@ function ToggleButton() {
             title="Toggle Theme"
             onClick={toggleDarkMode}
             className={`
-        w-12 
-        h-7 
-        rounded-full 
-        dark:bg-white
-        bg-[rgb(25,25,25)]
-        relative 
-        transition-colors 
-        duration-500 
-        ease-in
-        outline-none 
-        border-transparent`}
+            w-6
+            h-3.5
+            sm:w-12
+            sm:h-7 
+            rounded-full 
+            dark:bg-white
+            bg-[rgb(25,25,25)]
+            relative 
+            transition-colors 
+            duration-500 
+            ease-in
+            outline-none 
+            border-transparent`}
         >
             <div className='flex relative top-0 justify-between mx-1'>
                 <MoonIcon className="w-4" fill="#000" />
@@ -57,14 +59,19 @@ function ToggleButton() {
             <div id="toggle"
                 className={`
             absolute
-            rounded-full 
-            w-5 
-            h-5
-            top-1
+            rounded-full
+            w-2.5
+            h-2.5
+            sm:w-5 
+            sm:h-5
+            top-0.5
+            ml-0.5
+            sm:top-1
+            sm:ml-1
             bg-white
-            ml-1
             dark:bg-[rgb(25,25,25)]
-            dark:ml-6
+            dark:ml-3
+            dark:sm:ml-6
             pointer-events-none 
             transition-all 
             duration-300 

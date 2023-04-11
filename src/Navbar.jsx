@@ -61,7 +61,7 @@ function NavbarLogo() {
         <div>
             <a href="/">
                 <div className='flex flex-row items-center gap-2'>
-                    <h2 className="text-sm sm:text-xl font-bold text-[var(--font-color)]">chermdev
+                    <h2 className="text-lg sm:text-xl font-bold text-[var(--font-color)]">chermdev
                     </h2>
                     {/* <div className='flex items-center justify-start gap-1 text-xs leading-3'>
                         <Python className='w-6 h-6' alt="Python">
@@ -125,10 +125,10 @@ function Navbar() {
     )
 
     return (
-        <nav className={`fixed top-0 z-50 backdrop-blur-lg shadow-xl w-full bg-[var(--bg-navbar-color)] md:flex md:items-center md:justify-center ${navbar ? "h-auto" : "h-20"}`}>
+        <nav className={`fixed top-0 z-50 backdrop-blur-lg shadow-xl w-full bg-[var(--bg-navbar-color)] md:flex md:items-center md:justify-center ${navbar ? "h-auto" : "h-12 sm:h-20"}`}>
             <div className="md:flex md:max-w-[var(--max-page-width)] md:w-[var(--page-width)] md:justify-between">
                 <div id="bar" className='flex z-52 justify-center items-center md:bg-inherit'>
-                    <div className="h-20 max-w-[var(--max-page-width)] w-[var(--page-width)] md:w-auto flex items-center justify-between py-4 md:py-6 md:flex md:gap-6">
+                    <div className="h-12 sm:h-20 max-w-[var(--max-page-width)] w-[var(--page-width)] md:w-auto flex items-center justify-between py-4 md:py-6 md:flex md:gap-6">
                         <NavbarLogo />
                         <div className='flex items-center gap-3'>
                             <SchemeButton />

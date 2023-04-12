@@ -26,10 +26,10 @@ function Home() {
                 </div>
                 <div className="p-12 xs:p-14 md:p-16 lg:p-20 md:w-[50%] flex justify-center items-center ">
                     <ComputerIcon className='w-full fill-current' />
-                    <div className='absolute blur-[4rem] sm:blur-[5rem] lg:md:blur-[7rem] xl:md:blur-[9rem] 2xl:blur-[12rem] z-[-2]'>
+                    {/* <div className='absolute blur-[4rem] sm:blur-[5rem] lg:md:blur-[7rem] xl:md:blur-[9rem] 2xl:blur-[12rem] z-[-2]'>
                         <Curve2 className='top-1/2 -translate-y-1/2 w-[200vw] fill-teal-300 dark:fill-sky-700' />
                         <Curve1 className='top-1/2 -translate-y-1/2 w-[250vw] fill-teal-200 dark:fill-blue-900' />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

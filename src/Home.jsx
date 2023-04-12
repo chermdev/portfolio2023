@@ -1,30 +1,38 @@
-import Section from "./Section"
+import { ReactComponent as Curve1 } from './assets/curves/curve1.svg'
+import { ReactComponent as Curve2 } from './assets/curves/curve2.svg'
+import { ReactComponent as Curve3 } from './assets/curves/curve3.svg'
+import { ReactComponent as ComputerIcon } from './assets/icons/computer.svg'
+
 
 function Home() {
 
     return (
-        // <section id={"home"} className="flex flex-col justify-center min-h-[calc(100vh-5rem)] h-[calc(100vh-5rem)]">
-        //   <h1 className="text-6xl md:text-8xl xl:text-9xl pb-12">Welcome</h1>
-        //   <p className="text-2xl md:text-3xl xl:text-3xl">I'm [NAME], lorem ipsum bla bla </p>
-        // </section>
-        <Section id={"home"}>
-            <div className="h-[100vh] flex flex-col sm:flex-row-reverse justify-evenly">
-                {/* <div className="">
-                    <img className="rounded-full w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem] object-cover" src="https://res.cloudinary.com/practicaldev/image/fetch/s--a67XH0QN--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/xndmxrfhliweofif9jty.png" alt="" />
-                </div> */}
-                <div className="pb-12 sm:pb-20 h-full flex flex-col justify-evenly items-center md:items-center md:justify-center from-teal-500 to-blue-300 dark:from-blue-400 dark:to-pink-400 bg-clip-text bg-gradient-to-r">
-                    <p className="w-full text-left text-[4vw] sm:text-xl md:text-4xl text-stone-900 dark:text-white">Hello, I'm <strong className="text-transparent">Carlos Emmanuel Hernandez</strong>, SDET and Web Developer and I do</p>
-                    <div className="w-min h-min [writing-mode:vertical-rl] md:[writing-mode:horizontal-tb]">
-                        <h1 className="[text-shadow:2px 2px 2px] text-[11vh] sm:text-[12.3vh] md:text-[17vw] leading-none text-left font-extrabold text-transparent">
-                            SOFTWARE
+        <section id="home" className="h-screen w-screen flex justify-center pt-16 sm:pt-20">
+            <div className="w-[var(--max-page-width)] max-w-[var(--max-navbar-width)] flex justify-end items-center flex-col-reverse md:flex-row">
+                <div className="md:w-[50%] flex justify-center items-center">
+                    <div className=" from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 bg-clip-text bg-gradient-to-r">
+                        <p className="text-left text-[5vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">Hello, I'm</p>
+                        <h1 className="break-all [font-size:clamp(1rem,15.8vw,12rem)] md:[font-size:clamp(1rem,10vw,10rem)] leading-[0.8] md:leading-[0.8] font-extrabold text-transparent">
+                            CARLOS
                         </h1>
-                        <h1 className="[text-shadow:2px 2px 2px] text-[8vh] sm:text-[9vh] md:text-[12.4vw] leading-none text-left font-extrabold text-transparent">
-                            DEVELOPMENT
+                        <h1 className="break-all [font-size:clamp(1rem,10.9vw,12rem)]  md:[font-size:clamp(1rem,6.9vw,6.9rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
+                            EMMANUEL
                         </h1>
+                        <h1 className="break-all [font-size:clamp(1rem,10vw,12rem)]  md:[font-size:clamp(1rem,6.35vw,6.35rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
+                            HERNANDEZ
+                        </h1>
+                        <p className="w-full text-left text-[5vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">SDET and Web Developer.</p>
+                    </div>
+                </div>
+                <div className="p-12 xs:p-14 md:p-16 lg:p-20 md:w-[50%] flex justify-center items-center ">
+                    <ComputerIcon className='w-full fill-current' />
+                    <div className='absolute blur-[4rem] sm:blur-[5rem] lg:md:blur-[7rem] xl:md:blur-[9rem] 2xl:blur-[12rem] z-[-2]'>
+                        <Curve2 className='top-1/2 -translate-y-1/2 w-[200vw] fill-teal-300 dark:fill-sky-700' />
+                        <Curve1 className='top-1/2 -translate-y-1/2 w-[250vw] fill-teal-200 dark:fill-blue-900' />
                     </div>
                 </div>
             </div>
-        </Section>
+        </section>
     )
 }
 

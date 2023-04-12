@@ -3,10 +3,10 @@ import './Work.css'
 import { ReactComponent as YazakiIcon } from './assets/companies/yazaki.svg'
 import { ReactComponent as DeloitteIcon } from './assets/companies/deloitte.svg'
 
-function CompanyLogoLabel({ LogoComponent }) {
+function CompanyLogoLabel({ LogoComponent, colorStyle = "fill-current" }) {
     return (
-        <div className='h-[1.5rem] w-[5rem] p-[0.3rem] rounded-md'>
-            {<LogoComponent className='h-full w-full white fill-current' />}
+        <div className='h-[1.5rem] max-w-[5rem] p-[0.3rem] rounded-md'>
+            {<LogoComponent className={`h-full w-full ${colorStyle}`} />}
         </div>
     )
 }
@@ -53,7 +53,7 @@ function WorkCard({ timeStr,
     active = false
 }) {
     return (
-        <li className={`mb-10 ml-2 md:ml-20 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
+        <li className={`mb-10 ml-2 md:ml-16 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
             {(active) ?
                 (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-lime-500 animation-pulse"></div>) :
                 (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
@@ -104,7 +104,9 @@ function Work() {
         {
             id: 1,
             timeStr: "Jan 2021 - Now",
-            companyLogo: deloitteLogo,
+            companyLogo: <>
+                <CompanyLogoLabel LogoComponent={DeloitteIcon} />
+            </>,
             role: "Software Development Engineer in Test II",
             description: "Create a custom python framework for E2E automated tests for an e-commerce web page, testing more than 30 locales using Python, Pytest, Selenium, Docker, Jenkins and API integrations with Google Cloud Platform:",
             tasks: [
@@ -121,7 +123,9 @@ function Work() {
         {
             id: 2,
             timeStr: "Sept 2020 - Jan 2021",
-            companyLogo: deloitteLogo,
+            companyLogo: <>
+                <CompanyLogoLabel LogoComponent={DeloitteIcon} />
+            </>,
             role: "Embedded Automotive Test Engineer",
             description: "Develop automated test scripts using the company's internal python framework for testing Instrument Panel Cluster (IPC). Do research and create documentation to help with tests development.",
             active: false
@@ -129,7 +133,9 @@ function Work() {
         {
             id: 3,
             timeStr: "June 2019 - Apr 2020",
-            companyLogo: yazakiLogo,
+            companyLogo: <>
+                <CompanyLogoLabel LogoComponent={YazakiIcon} />
+            </>,
             role: "Automotive Software Test Engineer",
             description: "Test Automation Development for testing Instrument Panel Cluster (IPC) functionality using CAN protocol according to requirements from client (GM). Creation and run of test cases for IPC Indicators. Report and update procedure documentation according to the latest test case version and help the team doing problem-solving.",
             active: false
@@ -137,13 +143,13 @@ function Work() {
     ]
 
     return (
-        <Section id="work">
-            <div className='pt-20 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-20 xl:gap-0'>
-                <div className='xl:mr-20'>
+        <section id="work" className="flex justify-center pt-16 sm:pt-20">
+            <div className='w-[var(--max-page-width)] max-w-[var(--max-section-width)] m-auto pt-20 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-20 xl:gap-0'>
+                <div className='xl:mr-16'>
                     <h1 className='text-xl md:text-3xl font-bold mb-5'>Work Experience</h1>
                     <p className='text-xs sm:text-sm md:text-base break-normal text-justify'>awddd dddwwww wwwww www www wwwwwwwwww wwwwwwww wwwwwww wwawddddddww  wwwwww wwww wwww ww wwwwwww wwwwww wwww wwwww wwawdddd ddwwwwww w wwwwwwwwwwww wwwwwww wwwww ww wwwwww wwwawddddddwwwwwww wwwwwww ww wwwwww wwwwww wwwwwww wwwwwwwawddddddw wwwwww wwww wwwwwwww wwwww wwwwww wwwww ww wwwwwa wddddddwwwwwwwwwwww wwwwww wwwwww wwwwwww wwwwww wwwwwawdd ddddwwwww ww wwwww wwwww wwwwwwwwww wwwwww wwwwww www</p>
                 </div>
-                <div className='max-w-full flex justify-center xl:justify-start xl:min-w-[50%]'>
+                <div className='flex justify-center xl:justify-start xl:min-w-[50%]'>
                     <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">
                         {workExpList.map(job =>
                             <WorkCard
@@ -154,7 +160,7 @@ function Work() {
                     </ol>
                 </div>
             </div>
-        </Section >
+        </section>
     )
 }
 

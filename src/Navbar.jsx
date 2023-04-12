@@ -1,5 +1,4 @@
 import { useContext, useEffect, useRef, useState } from 'react'
-import './Navbar.css'
 import { ReactComponent as Github } from './assets/logos/github.svg'
 import { ReactComponent as Python } from './assets/logos/python-color.svg'
 import { ReactComponent as Javascript } from './assets/logos/javascript-color.svg'
@@ -9,22 +8,22 @@ import { DarkModeContext } from './context/DarkModeContext'
 function NavbarLi({ children, current, id }) {
 
     return (
-        <li className={`transition-all duration-300 ${current == id ? "text-gray-800 dark:text-white" : "text-gray-400 dark:text-gray-500 hover:text-gray-800 hover:dark:text-white"}`}>
+        <li className={` ${current == id ? "text-gray-800 dark:text-white" : "text-gray-400 dark:text-gray-500 hover:text-gray-800 hover:dark:text-white"}`}>
             <a href={`#${id}`}>{children}</a>
         </li>
     )
 }
 function NavbarMenuButton({ setNavbar, navbar }) {
     return (
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center justify-center">
             <button
-                className="navbar-menu-button p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                className="navbar-menu-button text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
             >
                 {navbar ? (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6"
+                        className="w-8 h-8"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >
@@ -37,7 +36,7 @@ function NavbarMenuButton({ setNavbar, navbar }) {
                 ) : (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6"
+                        className="w-8 h-8"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -75,9 +74,9 @@ function NavbarLogo() {
     )
 }
 
-function NavbarItems({ current }) {
+function NavbarItems({ current, navbarStyle }) {
     return (
-        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 whitespace-nowrap">
+        <ul className={`${navbarStyle}`}>
             <NavbarLi key={1} current={current} id={"home"}>
                 Home
             </NavbarLi>
@@ -125,25 +124,17 @@ function Navbar() {
     )
 
     return (
-        <nav className={`fixed top-0 z-50 backdrop-blur-lg shadow-xl w-full bg-[var(--bg-navbar-color)] md:flex md:items-center md:justify-center ${navbar ? "h-auto" : "h-12 sm:h-20"}`}>
-            <div className="md:flex md:max-w-[var(--max-page-width)] md:w-[var(--page-width)] md:justify-between">
-                <div id="bar" className='flex z-52 justify-center items-center md:bg-inherit'>
-                    <div className="h-12 sm:h-20 max-w-[var(--max-page-width)] w-[var(--page-width)] md:w-auto flex items-center justify-between py-4 md:py-6 md:flex md:gap-6">
-                        <NavbarLogo />
-                        <div className='flex items-center gap-3'>
-                            <SchemeButton />
-                            <NavbarMenuButton setNavbar={setNavbar} navbar={navbar} />
-                        </div>
+        <nav className={`w-screen fixed top-0 z-50 backdrop-blur-lg shadow-xl bg-[var(--bg-navbar-color)] flex justify-center items-center`}>
+            <div className={`w-[var(--max-navbar-width)] max-w-[max(var(--max-page-width))] overflow-hidden ${navbar ? "h-auto" : "h-16 sm:h-20"}`}>
+                <div className='flex flex-row gap-3 md:gap-0 justify-between items-center h-16 sm:h-20'>
+                    <NavbarLogo />
+                    <div className='flex gap-3 md:gap-6 items-center'>
+                        <NavbarItems current={current} navbarStyle={"hidden md:flex gap-6 items-center  whitespace-nowrap"} />
+                        <SchemeButton />
+                        <NavbarMenuButton setNavbar={setNavbar} navbar={navbar} />
                     </div>
                 </div>
-                <div id="items" className={`ease-linear transition duration-150 overflow-hidden flex gap-5 justify-center items-center md:bg-inherit md:opacity-100 ${navbar ? "opacity-100" : "opacity-0"
-                    } `}>
-                    <div
-                        className={`max-w-[var(--max-page-width)] w-[var(--page-width)] justify-self-center pb-3 md:block md:pb-0 md:mt-0`}
-                    >
-                        <NavbarItems current={current} />
-                    </div>
-                </div>
+                <NavbarItems current={current} navbarStyle={`md:hidden ease-linear transition duration-150 md:bg-inherit flex flex-col p-6 gap-6 md:flex-row items-center whitespace-nowrap ${navbar ? "opacity-100" : "opacity-0"}`} />
             </div>
         </nav >
     )

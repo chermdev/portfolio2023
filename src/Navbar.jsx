@@ -8,7 +8,7 @@ import { DarkModeContext } from './context/DarkModeContext'
 function NavbarLi({ children, current, id }) {
 
     return (
-        <li className={` ${current == id ? "text-gray-800 dark:text-white" : "text-gray-400 dark:text-gray-500 hover:text-gray-800 hover:dark:text-white"}`}>
+        <li className={` ${current == id ? "text-stone-900 dark:text-white" : "text-gray-500 dark:text-gray-500 hover:text-gray-800 hover:dark:text-white"}`}>
             <a href={`#${id}`}>{children}</a>
         </li>
     )

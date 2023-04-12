@@ -14,7 +14,7 @@ function ToggleButton() {
             document.documentElement.style
                 .setProperty('--bg-color', 'rgb(20, 20, 20)')
             document.documentElement.style
-                .setProperty('--bg-navbar-color', 'rgba(25, 25, 25, 0.5)')
+                .setProperty('--bg-navbar-color', 'rgba(25, 25, 25, 0.6)')
             document.documentElement.style
                 .setProperty('--font-color', 'rgb(255, 255, 255)')
             document.documentElement.style
@@ -24,7 +24,7 @@ function ToggleButton() {
             document.documentElement.style
                 .setProperty('--bg-color', 'rgb(240, 240, 240)')
             document.documentElement.style
-                .setProperty('--bg-navbar-color', 'rgba(240, 240, 240, 0.5)')
+                .setProperty('--bg-navbar-color', 'rgba(240, 240, 240, 0.6)')
             document.documentElement.style
                 .setProperty('--font-color', 'rgb(20, 20, 20)')
             document.documentElement.style

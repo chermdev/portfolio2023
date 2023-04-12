@@ -10,16 +10,6 @@
 
 
 :root {
-    --bg-color: white;
-    --bg-navbar-color: rgb(250, 250, 250, 0.5);
-    --font-color: rgb(20, 20, 20);
-    --card-color: rgb(234, 234, 234);
-
-    --bg-color: rgb(20, 20, 20);
-    --bg-navbar-color: rgb(25, 25, 25, 0.5);
-    --font-color: rgb(255, 255, 255);
-    --card-color: rgb(23, 23, 23);
-
     --max-page-width: 86%;
     --max-navbar-width: 100rem;
     --max-section-width: 100rem;

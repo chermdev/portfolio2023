@@ -144,7 +144,7 @@ function Work() {
 
     return (
         <section id="work" className="flex justify-center pt-16 sm:pt-20">
-            <div className='w-[var(--max-page-width)] max-w-[var(--max-section-width)] m-auto pt-10 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
+            <div className='w-[var(--max-page-width)] max-w-[var(--max-section-width)] m-auto pt-5 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
                 <div className='xl:mr-16'>
                     <h1 className='text-xl md:text-3xl font-bold mb-5'>Work Experience</h1>
                     <p className='text-xs sm:text-sm md:text-base break-normal text-justify'>awddd dddwwww wwwww www www wwwwwwwwww wwwwwwww wwwwwww wwawddddddww  wwwwww wwww wwww ww wwwwwww wwwwww wwww wwwww wwawdddd ddwwwwww w wwwwwwwwwwww wwwwwww wwwww ww wwwwww wwwawddddddwwwwwww wwwwwww ww wwwwww wwwwww wwwwwww wwwwwwwawddddddw wwwwww wwww wwwwwwww wwwww wwwwww wwwww ww wwwwwa wddddddwwwwwwwwwwww wwwwww wwwwww wwwwwww wwwwww wwwwwawdd ddddwwwww ww wwwww wwwww wwwwwwwwww wwwwww wwwwww www</p>

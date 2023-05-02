@@ -7,7 +7,7 @@ import { ReactComponent as ComputerIcon } from './assets/icons/computer.svg'
 function Home() {
 
     return (
-        <section id="home" className="w-screen flex justify-center pt-16 sm:pt-20">
+        <section id="home" className="flex justify-center pt-16 sm:pt-20">
             <div className="min-h-screen h-full max-h-fit flex justify-end items-center flex-col-reverse md:flex-row">
                 <div className="md:w-[50%] flex justify-center items-center">
                     <div className=" from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 bg-clip-text bg-gradient-to-r">

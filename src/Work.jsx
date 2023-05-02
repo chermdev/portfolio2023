@@ -143,7 +143,7 @@ function Work() {
     ]
 
     return (
-        <section id="work" className="flex justify-center pt-16 sm:pt-20">
+        <section id="work" className="flex justify-center pt-16 sm:pt-20 bg-[var(--bg-color)]">
             <div className='w-[var(--max-page-width)] max-w-[var(--max-section-width)] m-auto py-5 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
                 <div className='xl:mr-16'>
                     <h1 className='text-xl md:text-3xl font-bold mb-5'>Work Experience</h1>

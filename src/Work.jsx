@@ -13,7 +13,7 @@ import { ReactComponent as DjangoIcon } from './assets/logos/django-color.svg'
 
 function CompanyLogoLabel({ LogoComponent, colorStyle = "fill-current" }) {
     return (
-        <div className='h-[1.5rem] max-w-[5rem] p-[0.3rem] rounded-md'>
+        <div className='h-[1.5rem] max-w-[4rem] sm:h-[2rem] sm:max-w-[6rem] lg:h-[2rem] lg:max-w-[8rem] p-[0.3rem] rounded-md'>
             {<LogoComponent className={`h-full w-full ${colorStyle}`} />}
         </div>
     )
@@ -56,7 +56,7 @@ function TechnologyTag({ name }) {
     const IconBgColor = technologyIcons[name]?.color
     const bgColor = IconBgColor != undefined ? IconBgColor : "bg-gray-200 dark:bg-gray-800"
     return (
-        <span className={`flex items-center justify-center w-[25px] h-[25px] ${bgColor} rounded-md overflow-hidden p-[2px]`}>
+        <span className={`flex items-center justify-center w-[25px] h-[25px] md:w-[40px] md:h-[40px] ${bgColor} rounded-md overflow-hidden p-[2px]`}>
             <IconSelected />
         </span>
     )
@@ -68,7 +68,7 @@ function TechnologiesTags({ technologies }) {
 
     return (
         (technologies.length > 0) &&
-        <ul className='mt-6 flex gap-2 flex-wrap' >
+        <ul className='mt-4 md:mt-6 flex gap-2 md:gap-4 flex-wrap' >
             {technologies.map((technology, index) =>
                 <TechnologyTag
                     key={index}
@@ -90,20 +90,20 @@ function WorkCard({ timeStr,
     return (
         <li className={`mb-10 ml-2 md:ml-16 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
             {(active) ?
-                (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-lime-500 animation-pulse"></div>) :
-                (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
+                (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] bg-lime-500 animation-pulse"></div>) :
+                (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
             }
-            <div className='flex gap-2 items-center mb-4 md:mb-2'>
-                <time className={`text-xs sm:text-sm font-normal leading-none ${(active) ? "text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
+            <div className='flex gap-2 md:gap-4 items-center mb-4 xl:mb-6'>
+                <time className={`text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
                 {companyLogo}
             </div>
-            <h3 className="text-sm sm:text-lg font-semibold text-gray-900 dark:text-white">{role}</h3>
-            <p className={`mb-4 text-xs sm:text-base font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
+            <h3 className="text-sm sm:text-lg font-semibold xl:text-2xl text-gray-900 dark:text-white">{role}</h3>
+            <p className={`mb-4 md:mb-6 text-xs sm:text-base xl:text-xl font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
             {
                 (tasks.length > 0) &&
                 <div>
-                    <h3 className='mb-2 font-semibold text-sm sm:text-lg text-gray-900 dark:text-white'>Tasks</h3>
-                    <ul className={`text-xs sm:text-base max-w-md  list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
+                    <h3 className='mb-2 md:mb-4 font-semibold text-sm sm:text-lg xl:text-2xl text-gray-900 dark:text-white'>Tasks</h3>
+                    <ul className={`text-xs sm:text-base xl:text-xl max-w-md  list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
                         {tasks.map((task, index) =>
                             <li
                                 key={index}>
@@ -121,10 +121,6 @@ function WorkCard({ timeStr,
 }
 
 function Work() {
-
-    const deloitteLogo = <CompanyLogoLabel LogoComponent={DeloitteIcon} />
-
-    const yazakiLogo = <CompanyLogoLabel LogoComponent={YazakiIcon} />
 
     const workExpList = [
         {
@@ -169,21 +165,24 @@ function Work() {
     ]
 
     return (
-        <section id="work" className="flex justify-center pt-16 sm:pt-20 bg-[var(--bg-color)]">
-            <div className='w-[var(--max-page-width)] max-w-[var(--max-section-width)] m-auto py-5 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
-                <div className='xl:mr-16'>
-                    <h1 className='text-xl md:text-3xl font-bold mb-5'>Work Experience</h1>
-                    <p className='text-xs sm:text-sm md:text-base break-normal text-justify'>awddd dddwwww wwwww www www wwwwwwwwww wwwwwwww wwwwwww wwawddddddww  wwwwww wwww wwww ww wwwwwww wwwwww wwww wwwww wwawdddd ddwwwwww w wwwwwwwwwwww wwwwwww wwwww ww wwwwww wwwawddddddwwwwwww wwwwwww ww wwwwww wwwwww wwwwwww wwwwwwwawddddddw wwwwww wwww wwwwwwww wwwww wwwwww wwwww ww wwwwwa wddddddwwwwwwwwwwww wwwwww wwwwww wwwwwww wwwwww wwwwwawdd ddddwwwww ww wwwww wwwww wwwwwwwwww wwwwww wwwwww www</p>
-                </div>
-                <div className='flex justify-center xl:justify-start xl:min-w-[50%]'>
-                    <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">
-                        {workExpList.map(job =>
-                            <WorkCard
-                                key={job.id}
-                                {...job}
-                            />
-                        )}
-                    </ol>
+        <section id="work" className="pt-16 sm:pt-20 bg-[var(--bg-color)]">
+            <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)] '>
+                <div className='py-5 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
+                    <div className='xl:mr-16 flex flex-col gap-4'>
+                        <h1 className='text-2xl md:text-3xl xl:text-6xl font-bold mb-5'>Work Experience</h1>
+                        <p className='text-xs sm:text-sm md:text-base xl:text-xl break-normal text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem incidunt nemo dolorum in officia earum quidem vitae veniam deserunt adipisci. Iste suscipit voluptatum ipsum, sunt autem expedita cupiditate ex cumque.</p>
+                        <p className='text-xs sm:text-sm md:text-base xl:text-xl break-normal text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus officia alias qui id, nobis ducimus excepturi est quod dolore. Perferendis molestiae ipsa nulla natus dolore consequuntur aspernatur delectus cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquam voluptatem eos officiis suscipit, molestiae repellendus consequatur tempora magnam id corrupti veritatis deleniti doloremque inventore voluptates assumenda ex. Labore, laborum.</p>
+                    </div>
+                    <div className='flex justify-center xl:justify-start xl:min-w-[65%]'>
+                        <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">
+                            {workExpList.map(job =>
+                                <WorkCard
+                                    key={job.id}
+                                    {...job}
+                                />
+                            )}
+                        </ol>
+                    </div>
                 </div>
             </div>
         </section>

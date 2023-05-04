@@ -2,37 +2,44 @@ import { ReactComponent as Curve1 } from './assets/curves/curve1.svg'
 import { ReactComponent as Curve2 } from './assets/curves/curve2.svg'
 import { ReactComponent as Curve3 } from './assets/curves/curve3.svg'
 import { ReactComponent as ComputerIcon } from './assets/icons/computer.svg'
+import GithubButton from './components/GithubButton'
+import { ReactComponent as GithubIcon } from './assets/logos/github.svg'
+import { ReactComponent as LinkedinIcon } from './assets/logos/linkedin.svg'
+import IconButton from './components/IconButton'
+import LinkedinButton from './components/LinkedinButton'
 
 
 function Home() {
 
     return (
-        <section id="home" className="flex justify-center pt-16 sm:pt-20">
-            <div className="min-h-screen h-full max-h-fit flex justify-end items-center flex-col-reverse md:flex-row">
-                <div className="md:w-[50%] flex justify-center items-center">
+        <header className='w-full flex items-center h-fit max-h-fit '>
+            <section id="home" className="m-auto pt-24 sm:pt-32 w-[var(--max-section-width)] max-w-[max(var(--max-page-width))] flex flex-col md:flex-row-reverse gap-6 md:gap-12 xl:gap-6">
+                <div className="m-auto w-full h-[40vh] md:h-[50vw] lg:h-[70vh] bg-[url('./assets/images/bg-me.jpg')] md:max-w-[40vw] md:max-h-[100vh] [background-position:56%_35%] [background-size:250%] md:[background-size:220%] lg:[background-size:180%]"></div>
+                <div className="flex flex-col gap-6 md:gap-12 xl:gap-6">
                     <div className=" from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 bg-clip-text bg-gradient-to-r">
                         <p className="text-left text-[5vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">Hello, I'm</p>
-                        <h1 className="break-all [font-size:clamp(1rem,15.8vw,12rem)] md:[font-size:clamp(1rem,10vw,10rem)] leading-[0.8] md:leading-[0.8] font-extrabold text-transparent">
+                        <h1 className="break-all [font-size:clamp(1rem,21.5vw,12rem)] md:[font-size:clamp(1rem,9.97vw,9rem)] leading-[0.8] md:leading-[0.8] font-extrabold text-transparent">
                             CARLOS
                         </h1>
-                        <h1 className="break-all [font-size:clamp(1rem,10.9vw,12rem)]  md:[font-size:clamp(1rem,6.9vw,6.9rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
+                        <h1 className="break-all [font-size:clamp(1rem,14.9vw,12rem)]  md:[font-size:clamp(1rem,6.9vw,6.2rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
                             EMMANUEL
                         </h1>
-                        <h1 className="break-all [font-size:clamp(1rem,10vw,12rem)]  md:[font-size:clamp(1rem,6.35vw,6.35rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
+                        <h1 className="break-all [font-size:clamp(1rem,13.7vw,12rem)]  md:[font-size:clamp(1rem,6.35vw,5.7rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
                             HERNANDEZ
                         </h1>
                         <p className="w-full text-left text-[5vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">SDET and Web Developer.</p>
                     </div>
+                    <div className='flex flex-row gap-2 md:gap-4'>
+                        <a className='flex items-center justify-center p-[6px] bg-opacity-20 dark:bg-opacity-20 hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all duration-300 overflow-hidden bg-gray-400 dark:bg-gray-500 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white w-10 h-10 xs:w-11 xs:h-11 sm:w-14 sm:h-14 xl:w-[4rem] xl:h-[4rem] rounded-xl' href="https://github.com/chermdev" target="_blank" alt="github">
+                            <GithubIcon className="fill-current w-[4rem] h-[4rem]" />
+                        </a>
+                        <a className='flex items-center justify-center p-[6px] bg-opacity-20 dark:bg-opacity-20 hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all duration-300 overflow-hidden bg-gray-400 dark:bg-gray-500 text-black dark:text-white hover:text-white dark:hover:text-white hover:bg-[#0a66c2] dark:hover:bg-[#0a66c2] w-10 h-10 xs:w-11 xs:h-11 sm:w-14 sm:h-14 xl:w-[4rem] xl:h-[4rem] rounded-xl' href="https://github.com/chermdev" target="_blank" alt="github">
+                            <LinkedinIcon className="fill-current w-[4rem] h-[4rem]" />
+                        </a>
+                    </div>
                 </div>
-                <div className="p-12 xs:p-14 md:p-16 lg:p-20 md:w-[50%] flex justify-center items-center ">
-                    <ComputerIcon className='w-full fill-current' />
-                    {/* <div className='absolute blur-[4rem] sm:blur-[5rem] lg:md:blur-[7rem] xl:md:blur-[9rem] 2xl:blur-[12rem] z-[-2]'>
-                        <Curve2 className='top-1/2 -translate-y-1/2 w-[200vw] fill-teal-300 dark:fill-sky-700' />
-                        <Curve1 className='top-1/2 -translate-y-1/2 w-[250vw] fill-teal-200 dark:fill-blue-900' />
-                    </div> */}
-                </div>
-            </div>
-        </section>
+            </section>
+        </header>
     )
 }
 

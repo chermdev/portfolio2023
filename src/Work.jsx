@@ -1,7 +1,15 @@
-import Section from './Section'
 import './Work.css'
 import { ReactComponent as YazakiIcon } from './assets/companies/yazaki.svg'
 import { ReactComponent as DeloitteIcon } from './assets/companies/deloitte.svg'
+import { ReactComponent as PythonIcon } from './assets/logos/python-color.svg'
+import { ReactComponent as SeleniumIcon } from './assets/logos/selenium-color.svg'
+import { ReactComponent as DockerIcon } from './assets/logos/docker-color.svg'
+import { ReactComponent as JenkinsIcon } from './assets/logos/jenkins-color.svg'
+import { ReactComponent as JavascriptIcon } from './assets/logos/javascript-color.svg'
+import { ReactComponent as ReactIcon } from './assets/logos/react-color.svg'
+import { ReactComponent as NextJSIcon } from './assets/logos/nextjs.svg'
+import { ReactComponent as DjangoIcon } from './assets/logos/django-color.svg'
+
 
 function CompanyLogoLabel({ LogoComponent, colorStyle = "fill-current" }) {
     return (
@@ -11,36 +19,63 @@ function CompanyLogoLabel({ LogoComponent, colorStyle = "fill-current" }) {
     )
 }
 
-function TechnologyTag({ children, name }) {
+function TechnologyTag({ name }) {
 
-    const colors = {
+    const technologyIcons = {
         python: {
-            colorStyle: "bg-[#00b7ff] text-[#00b7ff] border-[#00b7ff]"
+            icon: PythonIcon
         },
         selenium: {
-            colorStyle: "bg-[#00ab00] text-[#00ab00] border-[#00ab00]",
+            icon: SeleniumIcon,
+            color: "bg-[#59b943]"
         },
         docker: {
-            colorStyle: "bg-[#228ee1] text-[#228ee1] border-[#228ee1]"
+            icon: DockerIcon,
+            color: "bg-[#2396ed]"
         },
         jenkins: {
-            colorStyle: "bg-[#9d03fc] text-[#9d03fc] border-[#9d03fc]"
+            icon: JenkinsIcon,
+            color: "bg-[#f0d6b7]"
         },
         javascript: {
-            colorStyle: "bg-[#ead41c] text-[#ead41c] border-[#ead41c]"
+            icon: JavascriptIcon,
+            color: "bg-[#f7df1e]"
         },
         react: {
-            colorStyle: "bg-[#5ccfee] text-[#5ccfee] border-[#5ccfee]"
+            icon: ReactIcon
         },
         nextjs: {
-            colorStyle: "bg-[#020202] text-[#020202] border-[#020202] dark:bg-[#f2f2f2] dark:text-[#f2f2f2]  dark:border-[#f2f2f2]"
+            icon: NextJSIcon
+        },
+        django: {
+            icon: DjangoIcon,
+            color: "bg-[#092e20]"
         }
     }
+    const IconSelected = technologyIcons[name].icon
+    const IconBgColor = technologyIcons[name]?.color
+    const bgColor = IconBgColor != undefined ? IconBgColor : "bg-gray-200 dark:bg-gray-800"
+    return (
+        <span className={`flex items-center justify-center w-[25px] h-[25px] ${bgColor} rounded-md overflow-hidden p-[2px]`}>
+            <IconSelected />
+        </span>
+    )
+}
 
-    let colorStyle = (name in colors) ? colors[name].colorStyle : ""
+function TechnologiesTags({ technologies }) {
+
+
 
     return (
-        <span className={`${colorStyle} text-xs sm:text-sm border flex items-center justify-center bg-opacity-10 dark:bg-opacity-10 px-3 py-1 rounded-md`}>{children}</span>
+        (technologies.length > 0) &&
+        <ul className='mt-6 flex gap-2 flex-wrap' >
+            {technologies.map((technology, index) =>
+                <TechnologyTag
+                    key={index}
+                    name={technology}>
+                </TechnologyTag>
+            )}
+        </ul>
     )
 }
 
@@ -79,16 +114,7 @@ function WorkCard({ timeStr,
                 </div>
             }
             {
-                (technologies.length > 0) &&
-                <ul className='mt-6 flex gap-2 flex-wrap' >
-                    {technologies.map((technology, index) =>
-                        <TechnologyTag
-                            key={index}
-                            name={technology}>
-                            {technology}
-                        </TechnologyTag>
-                    )}
-                </ul>
+                <TechnologiesTags technologies={technologies} />
             }
         </li>
     )
@@ -116,7 +142,7 @@ function Work() {
                 "Run manual user acceptance tests.",
             ],
             technologies: [
-                "python", "selenium", "docker", "jenkins",
+                "python", "selenium", "docker", "jenkins"
             ],
             active: true
         },

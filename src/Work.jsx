@@ -165,13 +165,29 @@ function Work() {
     ]
 
     return (
-        <section id="work" className="pt-16 sm:pt-20 bg-[var(--bg-color)]">
+        <section id="work" className="pt-16 sm:pt-20">
             <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)] '>
                 <div className='py-5 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
-                    <div className='xl:mr-16 flex flex-col gap-4'>
-                        <h1 className='text-2xl md:text-3xl xl:text-6xl font-bold mb-5'>Work Experience</h1>
-                        <p className='text-xs sm:text-sm md:text-base xl:text-xl break-normal text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem incidunt nemo dolorum in officia earum quidem vitae veniam deserunt adipisci. Iste suscipit voluptatum ipsum, sunt autem expedita cupiditate ex cumque.</p>
-                        <p className='text-xs sm:text-sm md:text-base xl:text-xl break-normal text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi delectus officia alias qui id, nobis ducimus excepturi est quod dolore. Perferendis molestiae ipsa nulla natus dolore consequuntur aspernatur delectus cumque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aliquam voluptatem eos officiis suscipit, molestiae repellendus consequatur tempora magnam id corrupti veritatis deleniti doloremque inventore voluptates assumenda ex. Labore, laborum.</p>
+                    <div className='xl:mr-16 flex flex-col gap-4 bg-gradient-to-r bg-clip-text  dark:from-teal-400 dark:to-blue-600'>
+                        <h1 className='text-4xl md:text-3xl xl:text-6xl font-bold mb-5'>Work Experience</h1>
+                        <div className="flex flex-col gap-6 text-lg leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
+                            <p>
+                                I am a passionate software engineer with <strong className="text-transparent">over 3 years</strong> of hands-on experience delivering scalable and maintainable software
+                                development in test using <strong className="text-transparent">Python</strong> mainly and <strong className="text-transparent">Javascript</strong>.
+                            </p>
+                            <p>
+                                During my career <strong className="text-transparent">I have worked with the technologies:</strong> Selenium,
+                                Pytest, Playwright, Google Cloud APIs, Docker, Jenkins and more.
+                            </p>
+                            <p>
+                                I have also <strong className="text-transparent">developed personal projects</strong> like <strong className="text-transparent">APIs</strong> with FastAPI
+                                and <strong className="text-transparent">web pages</strong> using React / NextJS / Tailwind / postgreSQL with Supabase.
+                            </p>
+                            <p>
+                                Always trying to keep my knowledge updated
+                                improving my software development skills and learning new things.
+                            </p>
+                        </div>
                     </div>
                     <div className='flex justify-center xl:justify-start xl:min-w-[65%]'>
                         <ol className="relative border-l-2 border-gray-200 dark:border-gray-700">

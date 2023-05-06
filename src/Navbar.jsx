@@ -60,7 +60,7 @@ function NavbarLogo() {
         <div>
             <a href="/">
                 <div className='flex flex-row items-center gap-2'>
-                    <h2 className="text-lg sm:text-xl font-bold text-[var(--font-color)]">chermdev
+                    <h2 className="text-lg sm:text-xl font-bold text-[var(--font-color)]">Emmanuel Hdz
                     </h2>
                     {/* <div className='flex items-center justify-start gap-1 text-xs leading-3'>
                         <Python className='w-6 h-6' alt="Python">
@@ -80,10 +80,13 @@ function NavbarItems({ current, navbarStyle }) {
             <NavbarLi key={1} current={current} id={"home"}>
                 Home
             </NavbarLi>
-            <NavbarLi key={2} current={current} id={"work"}>
+            <NavbarLi key={2} current={current} id={"about"}>
+                About me
+            </NavbarLi>
+            <NavbarLi key={3} current={current} id={"work"}>
                 Work experience
             </NavbarLi>
-            <NavbarLi key={3} current={current} id={"contact"}>
+            <NavbarLi key={4} current={current} id={"contact"}>
                 Contact
             </NavbarLi>
         </ul>
@@ -107,7 +110,7 @@ function Navbar() {
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop
                     const sectionHeight = section.clientHeight
-                    if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+                    if (window.scrollY >= (sectionTop - 100)) {
                         setCurrent(section.id)
                     }
                 })

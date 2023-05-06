@@ -17,7 +17,7 @@ function Home() {
                 <div className="m-auto rounded-2xl lg:rounded-[2rem] 2xl:rounded-[3rem] w-full h-[40vh] md:h-[50vw] lg:h-[70vh] bg-[url('./assets/images/bg-me.jpg')] md:max-w-[40vw] max-h-[20rem] md:max-h-[40rem] bg-no-repeat [background-position:56%_35%] [background-size:250%] md:[background-size:220%] lg:[background-size:180%] animate-[easeIn_1s_ease-out_0.5s_both]"></div>
                 <div className="flex flex-col gap-6 md:gap-12 xl:gap-6">
                     <div className=" from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 bg-clip-text bg-gradient-to-r animate-[easeIn_1s_ease-in-out,slideFromLeft_1s_ease-in-out]">
-                        <p className="text-left text-[5vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">Hello, I'm</p>
+                        <p className="text-left text-[8vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">Hello, I'm</p>
                         <h1 className="break-all [font-size:clamp(1rem,21.5vw,12rem)] md:[font-size:clamp(1rem,9.97vw,9rem)] leading-[0.8] md:leading-[0.8] font-extrabold text-transparent">
                             CARLOS
                         </h1>
@@ -27,7 +27,7 @@ function Home() {
                         <h1 className="break-all [font-size:clamp(1rem,13.7vw,12rem)]  md:[font-size:clamp(1rem,6.35vw,5.7rem)] leading-[0.9] md:leading-[0.9] font-extrabold text-transparent">
                             HERNANDEZ
                         </h1>
-                        <p className="w-full text-left text-[5vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">SDET and Web Developer.</p>
+                        <p className="w-full text-left text-[8vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">SDET and Web Developer.</p>
                     </div>
                     <div className='flex flex-row gap-2 md:gap-4 '>
                         <div className='hover:animate-[wiggle_0.2s_ease-in-out_infinite]'>

@@ -168,8 +168,8 @@ function Work() {
         <section id="work" className="pt-16 sm:pt-20">
             <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)] '>
                 <div className='py-5 flex justify-center items-center flex-col xl:flex-row xl:items-start gap-10 xl:gap-0'>
-                    <div className='xl:mr-16 flex flex-col gap-4 bg-gradient-to-r bg-clip-text  dark:from-teal-400 dark:to-blue-600'>
-                        <h1 className='text-4xl md:text-3xl xl:text-6xl font-bold mb-5'>Work Experience</h1>
+                    <div className='xl:mr-16 flex flex-col gap-4 bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-teal-400 dark:to-blue-600'>
+                        <h1 className='text-4xl md:text-3xl xl:text-6xl font-bold mb-5 text-transparent'>Work Experience</h1>
                         <div className="flex flex-col gap-6 text-md leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
                             <p>
                                 I am a passionate software engineer with <strong className="text-transparent">over 3 years</strong> of hands-on experience delivering scalable and maintainable software

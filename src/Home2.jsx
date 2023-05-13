@@ -2,7 +2,7 @@ import { ReactComponent as BlobAnimation } from './assets/curves/blobanimation.s
 
 export default function Home2() {
     return (
-        <section id="home" className="flex flex-col bg-gradient-to-b from-transparent to-[var(--bg-color)] py-32 md:py-64">
+        <section id="home" className="flex flex-col bg-gradient-to-b from-transparent to-[var(--bg-color)] pb-32 pt-64 md:pb-64 md:pt-96">
             <div className="m-auto w-[var(--max-section-width)] max-w-[max(var(--max-page-width))] flex flex-col items-center gap-64 xl:gap-96">
                 <h2 className="font-bold text-center leading-[8vw] xs:leading-[4.5vw] xl:leading-[4vw] text-[10vw] xs:text-[5.4vw] xl:text-[5vw] bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500">
                     Hello,

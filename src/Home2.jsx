@@ -23,7 +23,7 @@ export default function Home2() {
                     </p>
                 </div>
             </div>
-            <div className='flex items-center justify-center w-full min-h-screen h-fit absolute top-0 blur-sm sm:blur-md z-[-1] overflow-hidden'>
+            <div className='flex items-center justify-center w-full min-h-screen h-fit absolute top-0 z-[-1] overflow-hidden'>
                 <BlobAnimation className="scale-[2] sm:scale-100 rotate-45" />
             </div>
         </section>

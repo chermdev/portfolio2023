@@ -124,9 +124,9 @@ function Navbar() {
     )
 
     return (
-        <nav className={`w-screen fixed top-0 z-50 backdrop-blur-lg shadow-xl bg-[var(--bg-navbar-color)] flex justify-center items-center`}>
-            <div className={`w-[var(--max-navbar-width)] max-w-[max(var(--max-page-width))] overflow-hidden ${navbar ? "h-auto" : "h-16 sm:h-20"}`}>
-                <div className='flex flex-row gap-3 md:gap-0 justify-between items-center h-16 sm:h-20'>
+        <nav className={`w-screen fixed top-0 z-50 backdrop-blur-lg flex justify-center items-center font-medium`}>
+            <div className={`w-[var(--max-navbar-width)] max-w-[max(var(--max-page-width))] overflow-hidden ${navbar ? "h-auto" : "h-12 md:h-16"}`}>
+                <div className='flex flex-row gap-3 md:gap-0 justify-between items-center h-12 md:h-16'>
                     <NavbarLogo />
                     <div className='flex gap-3 md:gap-6 items-center'>
                         <NavbarItems current={current} navbarStyle={"hidden md:flex gap-6 items-center  whitespace-nowrap"} />

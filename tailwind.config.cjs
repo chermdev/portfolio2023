@@ -26,6 +26,14 @@ module.exports = {
                 wiggle: {
                     '0%, 100%': { transform: 'rotate(-3deg)' },
                     '50%': { transform: 'rotate(3deg)' },
+                },
+                easeChange: {
+                    '0%,100%': {
+                        opacity: 0
+                    },
+                    '10%,90%': {
+                        opacity: 100
+                    }
                 }
             }
         },

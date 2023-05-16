@@ -32,7 +32,7 @@ export default function Home2() {
                         </div>
                         <section id='about' className='min-h-screen max-w-[50vw] xs:max-w-[25vw] xl:max-w-[20vw] m-auto flex flex-col items-center justify-center space-y-12 xs:space-y-32 bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 text-[3vw] xs:text-[1.2vw] xl:text-[1vw] leading-[3vw] xs:leading-[1.4vw] xl:leading-[1vw] tracking-wide text-center font-semibold uppercase '>
                             <div className='overflow-hidden max-w-[50vw] max-h-[50vw] w-72 h-72 rounded-3xl'>
-                                <div className='w-full h-full bg-[url("src/assets/images/bg-me.jpg")] bg-cover [background-position:0%_10%] bg-no-repeat scale-[2.4]'></div>
+                                <div className='w-full h-full bg-[url("./assets/images/bg-me.jpg")] bg-cover [background-position:0%_10%] bg-no-repeat scale-[2.4]'></div>
                             </div>
                             <div className='flex flex-row gap-2 md:gap-4'>
                                 <div className='hover:animate-[wiggle_0.2s_ease-in-out_infinite] '>

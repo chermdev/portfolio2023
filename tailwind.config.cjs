@@ -23,6 +23,14 @@ module.exports = {
                         opacity: 100,
                     },
                 },
+                slideFromTop: {
+                    '0%': {
+                        transform: 'translateY(-40vw)',
+                    },
+                    '100%': {
+                        transform: 'translateY(0px)',
+                    },
+                },
                 wiggle: {
                     '0%, 100%': { transform: 'rotate(-3deg)' },
                     '50%': { transform: 'rotate(3deg)' },

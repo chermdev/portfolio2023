@@ -8,31 +8,30 @@ import { ReactComponent as BlobAnimationDark } from './assets/curves/blobanimati
 export default function Home2() {
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
     return (
-        <div className='h-fit bg-gradient-to-b from-transparent to-[var(--bg-color)] overflow-hidden'>
-            <section id='home' className='relative flex flex-col items-center gap-64 xl:gap-96' >
-                <div className='relative w-[var(--max-section-width)] max-w-[max(var(--max-page-width))] pt-48 md:pt-96 pb-16 xs:pb-32 md:pb-32 xl:pb-32 m-auto flex flex-col justify-center items-center gap-32 md:gap-[18rem]'>
-                    <div className=''>
-                        <h2 className="font-bold text-center leading-[8vw] xs:leading-[4.5vw] xl:leading-[4vw] text-[10vw] xs:text-[5.4vw] xl:text-[5vw] bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 ">
-                            Hello,
-                            <br />
-                            I <strong className="text-transparent"><span className="">automate</span><span className="hidden">develop</span></strong>
-                            <br />
-                            things with
-                            <br />
-                            programming.
-                        </h2>
-                    </div>
-                </div>
-            </section >
-            <div className='absolute top-16 min-h-screen h-fit z-[-1] overflow-hidden'>
+
+        <div className='relative h-fit bg-gradient-to-b from-transparent to-[var(--bg-color)] overflow-hidden flex flex-col items-center'>
+            <div className='absolute top-16 h-fit z-[-1] overflow-hidden animate-[easeIn_1s_ease-in-out_0.3s_both] animate-[ping_1s_ease-in-out_reverse]'>
                 {
                     darkMode ?
                         <BlobAnimationDark className="w-[120vh] md:w-[100vw] rotate-45" /> :
                         <BlobAnimation className="w-[120vh] md:w-[100vw] rotate-45" />
                 }
             </div>
+            <section id='home' className='flex flex-col items-center gap-64 xl:gap-96' >
+                <div className='w-[var(--max-section-width)] max-w-[max(var(--max-page-width))] pt-48 md:pt-96 pb-16 xs:pb-32 md:pb-32 xl:pb-32 m-auto flex flex-col justify-center items-center gap-32 md:gap-[18rem]'>
+                    <h2 className="font-bold text-center leading-[8vw] xs:leading-[4.5vw] xl:leading-[4vw] text-[10vw] xs:text-[5.4vw] xl:text-[5vw] bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 animate-[easeIn_0.6s_ease-in-out_0.3s_both,slideFromTop_0.5s_ease-in-out_0.3s_both]">
+                        Hello,
+                        <br />
+                        I <strong className="text-transparent"><span className="">automate</span><span className="hidden">develop</span></strong>
+                        <br />
+                        things with
+                        <br />
+                        programming.
+                    </h2>
+                </div>
+            </section >
             <section id='about' className='min-h-screen max-w-[50vw] xs:max-w-[25vw] xl:max-w-[20vw] m-auto flex flex-col items-center justify-center space-y-12 xs:space-y-32 bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 text-[3vw] xs:text-[1.2vw] xl:text-[1vw] leading-[3vw] xs:leading-[1.4vw] xl:leading-[1vw] tracking-wide text-center font-semibold uppercase '>
-                <div className='overflow-hidden max-w-[50vw] max-h-[50vw] w-72 h-72 rounded-3xl'>
+                <div className='overflow-hidden max-w-[50vw] max-h-[50vw] w-72 h-72 rounded-3xl animate-[ping_1s_ease-in-out_reverse]'>
                     <div className='w-full h-full bg-[url("./assets/images/bg-me.jpg")] bg-cover [background-position:0%_10%] bg-no-repeat scale-[2.4]'></div>
                 </div>
                 <div className='flex flex-row gap-2 md:gap-4'>

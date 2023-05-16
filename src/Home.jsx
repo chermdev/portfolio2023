@@ -22,11 +22,6 @@ function Home() {
                         <p className="w-full text-left text-[8vw] md:[font-size:clamp(1rem,4vw,5rem)] leading-none text-stone-900 dark:text-white">SDET and Web Developer.</p>
                     </div>
                     <div className='flex flex-row gap-2 md:gap-4 '>
-                        {/* <div className='hover:animate-[wiggle_0.2s_ease-in-out_infinite]'>
-                            <a className='flex items-center justify-center p-[8px] bg-opacity-20 dark:bg-opacity-20 hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all duration-300 overflow-hidden bg-gray-400 dark:bg-gray-500 text-black dark:text-white hover:text-white dark:hover:text-black hover:bg-black dark:hover:bg-white w-10 h-10 xs:w-11 xs:h-11 sm:w-14 sm:h-14 xl:w-[6rem] xl:h-[4rem] rounded-2xl animate-[easeIn_0.3s_ease-in-out_0.6s_both,slideFromLeft_0.3s_ease-in-out_0.6s_both]' href="https://github.com/chermdev" target="_blank" alt="github">
-                                <GithubIcon className="fill-current w-[3rem] h-[3rem]" />
-                            </a>
-                        </div> */}
                         <div className='hover:animate-[wiggle_0.2s_ease-in-out_infinite] '>
                             <a className='flex items-center justify-center p-[8px] bg-opacity-20 dark:bg-opacity-20 hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all duration-300 overflow-hidden bg-gray-400 dark:bg-gray-500 text-black dark:text-white hover:text-white dark:hover:text-white hover:bg-[#0a66c2] dark:hover:bg-[#0a66c2] w-10 h-10 xs:w-11 xs:h-11 sm:w-14 sm:h-14 xl:w-[6rem] xl:h-[4rem] rounded-2xl animate-[easeIn_0.6s_ease-in-out_0.3s_both,slideFromLeft_0.6s_ease-in-out_0.3s_both]' href="https://www.linkedin.com/in/emmanuelhdz" target="_blank" alt="linkedin">
                                 <LinkedinIcon className="fill-current w-[3rem] h-[3rem]" />

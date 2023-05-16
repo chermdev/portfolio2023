@@ -8,7 +8,7 @@ import { DarkModeContext } from './context/DarkModeContext'
 function NavbarLi({ children, current, id }) {
 
     return (
-        <li className={` ${current == id ? "text-stone-900 dark:text-white" : "text-gray-500 dark:text-gray-500 hover:text-gray-800 hover:dark:text-white"}`}>
+        <li className={` ${current == id ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}`}>
             <a href={`#${id}`}>{children}</a>
         </li>
     )
@@ -86,9 +86,9 @@ function NavbarItems({ current, navbarStyle }) {
             <NavbarLi key={3} current={current} id={"work"}>
                 Work experience
             </NavbarLi>
-            <NavbarLi key={4} current={current} id={"contact"}>
+            {/* <NavbarLi key={4} current={current} id={"contact"}>
                 Contact
-            </NavbarLi>
+            </NavbarLi> */}
         </ul>
     )
 }
@@ -125,7 +125,7 @@ function Navbar() {
 
     return (
         <nav className={`w-screen fixed top-0 z-50 backdrop-blur-lg flex justify-center items-center font-medium`}>
-            <div className={`w-[var(--max-navbar-width)] max-w-[max(var(--max-page-width))] overflow-hidden ${navbar ? "h-auto" : "h-12 md:h-16"}`}>
+            <div className={`w-[var(--max-navbar-width)] text-lg max-w-[max(var(--max-page-width))] overflow-hidden ${navbar ? "h-auto" : "h-12 md:h-16"}`}>
                 <div className='flex flex-row gap-3 md:gap-0 justify-between items-center h-12 md:h-16'>
                     <NavbarLogo />
                     <div className='flex gap-3 md:gap-6 items-center'>

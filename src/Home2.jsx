@@ -9,7 +9,7 @@ export default function Home2() {
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
     return (
         <>
-            <section id="home" className='h-fit bg-gradient-to-b from-transparent to-[var(--bg-color)] overflow-hidden'>
+            <section id='home' className='h-fit bg-gradient-to-b from-transparent to-[var(--bg-color)] overflow-hidden'>
                 <div className='relative flex flex-col items-center gap-64 xl:gap-96'>
                     <div className='absolute top-16 min-h-screen h-fit z-[-1] overflow-hidden'>
                         {
@@ -30,7 +30,7 @@ export default function Home2() {
                                 programming.
                             </h2>
                         </div>
-                        <div className='min-h-screen max-w-[50vw] xs:max-w-[25vw] xl:max-w-[20vw] m-auto flex flex-col items-center justify-center space-y-12 xs:space-y-32 bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 text-[3vw] xs:text-[1.2vw] xl:text-[1vw] leading-[3vw] xs:leading-[1.4vw] xl:leading-[1vw] tracking-wide text-center font-semibold uppercase '>
+                        <section id='about' className='min-h-screen max-w-[50vw] xs:max-w-[25vw] xl:max-w-[20vw] m-auto flex flex-col items-center justify-center space-y-12 xs:space-y-32 bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600 dark:from-sky-500 dark:to-blue-500 text-[3vw] xs:text-[1.2vw] xl:text-[1vw] leading-[3vw] xs:leading-[1.4vw] xl:leading-[1vw] tracking-wide text-center font-semibold uppercase '>
                             <div className='overflow-hidden max-w-[50vw] max-h-[50vw] w-72 h-72 rounded-3xl'>
                                 <div className='w-full h-full bg-[url("src/assets/images/bg-me.jpg")] bg-cover [background-position:0%_10%] bg-no-repeat scale-[2.4]'></div>
                             </div>
@@ -58,10 +58,10 @@ export default function Home2() {
                                 I love to automate tests, develop websites, chatbots and help others.
                             </p>
 
-                        </div>
+                        </section>
                     </div>
                 </div>
-            </section>
+            </section >
             {/* <div className='fixed top-0 h-screen w-screen backdrop-blur-[0vw] z-[-2]'></div>
             <div className='absolute top-0 min-h-screen w-full h-full z-[-3] overflow-hidden'>
                 <div className=''>

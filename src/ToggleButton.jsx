@@ -7,7 +7,6 @@ import { DarkModeContext } from './context/DarkModeContext'
 function ToggleButton() {
 
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
-    // const [darkMode, setDarkMode] = useState(true)
 
     useEffect(() => {
         if (darkMode) {

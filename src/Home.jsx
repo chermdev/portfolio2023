@@ -1,12 +1,4 @@
-import { ReactComponent as Curve1 } from './assets/curves/curve1.svg'
-import { ReactComponent as Curve2 } from './assets/curves/curve2.svg'
-import { ReactComponent as Curve3 } from './assets/curves/curve3.svg'
-import { ReactComponent as ComputerIcon } from './assets/icons/computer.svg'
-import GithubButton from './components/GithubButton'
-import { ReactComponent as GithubIcon } from './assets/logos/github.svg'
 import { ReactComponent as LinkedinIcon } from './assets/logos/linkedin.svg'
-import IconButton from './components/IconButton'
-import LinkedinButton from './components/LinkedinButton'
 
 
 function Home() {

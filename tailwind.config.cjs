@@ -9,7 +9,7 @@ module.exports = {
             keyframes: {
                 slideFromLeft: {
                     '0%': {
-                        transform: 'translateX(-30vw)',
+                        transform: 'translateX(-40vw)',
                     },
                     '100%': {
                         transform: 'translateX(0px)',
@@ -29,6 +29,22 @@ module.exports = {
                     },
                     '100%': {
                         transform: 'translateY(0px)',
+                    },
+                },
+                slideFromBottom: {
+                    '0%': {
+                        transform: 'translateY(40vw)',
+                    },
+                    '100%': {
+                        transform: 'translateY(0px)',
+                    },
+                },
+                slideFromRight: {
+                    '0%': {
+                        transform: 'translateX(40vw)',
+                    },
+                    '100%': {
+                        transform: 'translateX(0px)',
                     },
                 },
                 wiggle: {

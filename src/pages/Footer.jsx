@@ -1,5 +1,5 @@
-import { ReactComponent as LinkedinIcon } from './assets/logos/linkedin.svg'
-import { ReactComponent as GithubIcon } from './assets/logos/github.svg'
+import { ReactComponent as LinkedinIcon } from './../assets/logos/technologies/linkedin.svg'
+import { ReactComponent as GithubIcon } from './../assets/logos/technologies/github.svg'
 
 
 function ContactForm() {

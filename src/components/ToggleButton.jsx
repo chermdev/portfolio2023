@@ -1,8 +1,8 @@
 import { useState, useEffect, useContext } from 'react'
-import { ReactComponent as SunIcon } from './assets/icons/sun.svg'
-import { ReactComponent as MoonIcon } from './assets/icons/moon.svg'
-import { ReactComponent as DesktopIcon } from './assets/icons/desktop.svg'
-import { DarkModeContext } from './context/DarkModeContext'
+import { ReactComponent as SunIcon } from './../assets/icons/sun.svg'
+import { ReactComponent as MoonIcon } from './../assets/icons/moon.svg'
+import { ReactComponent as DesktopIcon } from './../assets/icons/desktop.svg'
+import { DarkModeContext } from '../context/DarkModeContext'
 
 function ToggleButton() {
 

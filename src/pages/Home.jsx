@@ -1,4 +1,4 @@
-import { ReactComponent as LinkedinIcon } from './assets/logos/linkedin.svg'
+import { ReactComponent as LinkedinIcon } from './../assets/logos/technologies/linkedin.svg'
 
 
 function Home() {

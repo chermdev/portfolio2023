@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef, useState } from 'react'
-import { ReactComponent as Github } from './assets/logos/github.svg'
-import { ReactComponent as Python } from './assets/logos/python-color.svg'
-import { ReactComponent as Javascript } from './assets/logos/javascript-color.svg'
+import { ReactComponent as Github } from './../assets/logos/technologies/github.svg'
+import { ReactComponent as Python } from './../assets/logos/technologies/python-color.svg'
+import { ReactComponent as Javascript } from './../assets/logos/technologies/javascript-color.svg'
 import ToggleButton from './ToggleButton'
-import { DarkModeContext } from './context/DarkModeContext'
+import { DarkModeContext } from '../context/DarkModeContext'
 
 function NavbarLi({ children, current, id }) {
 

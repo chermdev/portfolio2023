@@ -80,15 +80,12 @@ function NavbarItems({ current, navbarStyle }) {
             <NavbarLi key={1} current={current} id={"home"}>
                 Home
             </NavbarLi>
-            <NavbarLi key={2} current={current} id={"about"}>
+            {/* <NavbarLi key={2} current={current} id={"about"}>
                 About me
-            </NavbarLi>
-            <NavbarLi key={3} current={current} id={"work"}>
+            </NavbarLi> */}
+            <NavbarLi key={2} current={current} id={"work"}>
                 Work experience
             </NavbarLi>
-            {/* <NavbarLi key={4} current={current} id={"contact"}>
-                Contact
-            </NavbarLi> */}
         </ul>
     )
 }

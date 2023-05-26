@@ -5,7 +5,7 @@ import ResumeContactBtn from './About/Buttons/Resume'
 function About() {
     return (
         <div className='my-16 py-12 m-auto max-w-[var(--max-page-width)] bg-black bg-opacity-60 rounded-2xl px-10 flex flex-col lg:flex-row items-center justify-center gap-12'>
-            <div className='overflow-hidden max-w-[50vw] max-h-[50vw] w-72 h-72 rounded-3xl animate-[ping_1s_ease-in-out_reverse]'>
+            <div className='overflow-hidden max-w-[50vw] max-h-[50vw] w-72 h-72 rounded-3xl animate-[ping_1s_ease-in-out_0.7s_reverse_both]'>
                 <div className='w-full h-full bg-[url("./assets/images/bg-me.jpg")] bg-cover [background-position:0%_10%] bg-no-repat scale-[2.4]'>
                 </div>
             </div>

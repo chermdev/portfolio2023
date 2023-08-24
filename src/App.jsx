@@ -13,7 +13,7 @@ function App() {
         <div className="App">
             <div className='relative bg-gradient-to-b from-transparent to-[var(--bg-color)] overflow-hidden flex flex-col items-center'>
                 <Home2 />
-                <div className='absolute z-[-1] top-16 overflow-hidden animate-[easeIn_1s_ease-in-out_0.3s_both] animate-[ping_1s_ease-in-out_reverse]'>
+                <div className='absolute z-[-1] top-16 overflow-hidden animate-[easeIn_1s_ease-in-out_0.3s_both]'>
                     {
                         darkMode ?
                             <BlobAnimationDark className="w-[max(120vh,100vw)] rotate-45" /> :

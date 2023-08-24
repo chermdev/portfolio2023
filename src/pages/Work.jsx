@@ -19,39 +19,40 @@ function CompanyLogoLabel({ LogoComponent, colorStyle = "fill-current" }) {
     )
 }
 
+const technologyIcons = {
+    python: {
+        icon: PythonIcon
+    },
+    selenium: {
+        icon: SeleniumIcon,
+        color: "bg-[#59b943]"
+    },
+    docker: {
+        icon: DockerIcon,
+        color: "bg-[#2396ed]"
+    },
+    jenkins: {
+        icon: JenkinsIcon,
+        color: "bg-[#f0d6b7]"
+    },
+    javascript: {
+        icon: JavascriptIcon,
+        color: "bg-[#f7df1e]"
+    },
+    react: {
+        icon: ReactIcon
+    },
+    nextjs: {
+        icon: NextJSIcon
+    },
+    django: {
+        icon: DjangoIcon,
+        color: "bg-[#092e20]"
+    }
+}
+
 function TechnologyTag({ name }) {
 
-    const technologyIcons = {
-        python: {
-            icon: PythonIcon
-        },
-        selenium: {
-            icon: SeleniumIcon,
-            color: "bg-[#59b943]"
-        },
-        docker: {
-            icon: DockerIcon,
-            color: "bg-[#2396ed]"
-        },
-        jenkins: {
-            icon: JenkinsIcon,
-            color: "bg-[#f0d6b7]"
-        },
-        javascript: {
-            icon: JavascriptIcon,
-            color: "bg-[#f7df1e]"
-        },
-        react: {
-            icon: ReactIcon
-        },
-        nextjs: {
-            icon: NextJSIcon
-        },
-        django: {
-            icon: DjangoIcon,
-            color: "bg-[#092e20]"
-        }
-    }
     const IconSelected = technologyIcons[name].icon
     const IconBgColor = technologyIcons[name]?.color
     const bgColor = IconBgColor != undefined ? IconBgColor : "bg-gray-200 dark:bg-gray-800"
@@ -85,16 +86,22 @@ function WorkCard({ timeStr,
     description,
     tasks = [],
     technologies = [],
-    active = false
+    active = false,
+    intern = false
 }) {
     return (
         <li className={`mb-10 ml-2 md:ml-16 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
             {(active) ?
-                (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] bg-lime-500 animation-pulse"></div>) :
+                (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] bg-lime-500 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
                 (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
             }
+            {
+                (intern) && (
+                    <span className='border-[1px] rounded-md w-fit px-3 border-cyan-100 text-cyan-100 bg-cyan-100 bg-opacity-10 text-xs sm:text-base md:text-base xl:text-base'>Intern</span>
+                )
+            }
             <div className='flex gap-2 md:gap-4 items-center mb-4 xl:mb-6'>
-                <time className={`text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
+                <time className={`text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "border-[1px] rounded-md px-2 border-lime-500 bg-lime-500 bg-opacity-10 text-lime-500 animate-[pulseActiveNoScale_2s_ease-in-out_infinite]" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
                 {companyLogo}
             </div>
             <h3 className="text-sm sm:text-lg font-semibold xl:text-2xl text-gray-900 dark:text-white">{role}</h3>
@@ -160,7 +167,8 @@ function Work() {
             </>,
             role: "Automotive Software Test Engineer",
             description: "Test Automation Development for testing Instrument Panel Cluster (IPC) functionality using CAN protocol according to requirements from client (GM). Creation and run of test cases for IPC Indicators. Report and update procedure documentation according to the latest test case version and help the team doing problem-solving.",
-            active: false
+            active: false,
+            intern: true
         }
     ]
 

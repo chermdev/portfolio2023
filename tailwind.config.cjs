@@ -7,6 +7,28 @@ module.exports = {
     theme: {
         extend: {
             keyframes: {
+                pulseActive: {
+                    '0%': {
+                        boxShadow: '0 0 0 0'
+                    },
+                    '40%': {
+                        boxShadow: '0 0 0 2px'
+                    },
+                    '100%': {
+                        boxShadow: '0 0 0 0'
+                    }
+                },
+                pulseActiveNoScale: {
+                    '0%': {
+                        boxShadow: '0 0 0 0'
+                    },
+                    '40%': {
+                        boxShadow: '0 0 0 2px'
+                    },
+                    '100%': {
+                        boxShadow: '0 0 0 0'
+                    }
+                },
                 slideFromLeft: {
                     '0%': {
                         transform: 'translateX(-40vw)',
@@ -60,9 +82,6 @@ module.exports = {
                     }
                 }
             }
-        },
-    },
-    plugins: [
-        require('flowbite/plugin')
-    ]
+        }
+    }
 }

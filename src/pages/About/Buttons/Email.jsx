@@ -15,7 +15,7 @@ export default function EmailContactBtn() {
                 onMouseLeave={() => {
                     setEmailToolTopText(defaultToolTipText)
                 }}
-                className="relative inline-flex items-center justify-center text-2xl font-bold rounded-2xl animate-[easeIn_0.6s_ease-in-out_0.7s_both,slideFromRight_0.6s_ease-in-out_0.7s_both] group px-6 py-1 text-[#0e2550] bg-white bg-opacity-20 outline-2 outline-offset-0 outline-[#0e2550] outline-none hover:text-white hover:outline-0 hover:bg-opacity-100 hover:bg-[#01131d] backdrop-blur-lg shadow-dark/30 shadow-md hover:shadow-black/30 hover:shadow-lg
+                className="relative inline-flex items-center justify-center text-2xl font-bold rounded-2xl animate-[easeIn_0.6s_ease-in-out_0.7s_both] group px-6 py-1 text-[#0e2550] bg-white bg-opacity-20 outline-2 outline-offset-0 outline-[#0e2550] outline-none hover:text-white hover:outline-0 hover:bg-opacity-100 hover:bg-[#01131d] backdrop-blur-lg shadow-dark/30 shadow-md hover:shadow-black/30 hover:shadow-lg
                 dark:text-[#c9e3ec] 
                 dark:bg-black 
                 dark:outline-[#c9e3ec] 

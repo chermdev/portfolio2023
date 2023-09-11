@@ -69,7 +69,7 @@ function TechnologiesTags({ technologies }) {
 
     return (
         (technologies.length > 0) &&
-        <ul className='mt-4 md:mt-6 flex gap-2 md:gap-4 flex-wrap' >
+        <ul className='flex gap-2 md:gap-4 flex-wrap' >
             {technologies.map((technology, index) =>
                 <TechnologyTag
                     key={index}
@@ -90,39 +90,49 @@ function WorkCard({ timeStr,
     intern = false
 }) {
     return (
-        <li className={`mb-10 ml-2 md:ml-16 border p-6 rounded-lg ${active ? "border-lime-500" : "border-gray-300 dark:border-stone-800"}`}>
-            {(active) ?
-                (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] bg-lime-500 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
-                (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
-            }
-            {
-                (intern) && (
-                    <span className='border-[1px] rounded-md w-fit px-3 border-cyan-100 text-cyan-100 bg-cyan-100 bg-opacity-10 text-xs sm:text-base md:text-base xl:text-base'>Intern</span>
-                )
-            }
-            <div className='flex gap-2 md:gap-4 items-center mb-4 xl:mb-6'>
-                <time className={`text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "border-[1px] rounded-md px-2 border-lime-500 bg-lime-500 bg-opacity-10 text-lime-500 animate-[pulseActiveNoScale_2s_ease-in-out_infinite]" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
-                {companyLogo}
-            </div>
-            <h3 className="text-sm sm:text-lg font-semibold xl:text-2xl text-gray-900 dark:text-white">{role}</h3>
-            <p className={`mb-4 md:mb-6 text-xs sm:text-base xl:text-xl font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
-            {
-                (tasks.length > 0) &&
-                <div>
-                    <h3 className='mb-2 md:mb-4 font-semibold text-sm sm:text-lg xl:text-2xl text-gray-900 dark:text-white'>Tasks</h3>
-                    <ul className={`text-xs sm:text-base xl:text-xl max-w-md  list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
-                        {tasks.map((task, index) =>
-                            <li
-                                key={index}>
-                                {task}
-                            </li>
-                        )}
-                    </ul>
+        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border border-lime-500" : "border border-gray-300 dark:border-stone-800"}`}>
+            <div className={`p-6 xl:p-8 ${active ? "bg-lime-500 bg-opacity-10 dark:bg-lime-500 dark:bg-opacity-10" : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
+                {(active) ?
+                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] bg-lime-500 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
+                    (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
+                }
+                <div className='flex flex-col gap-4'>
+                    <div className='relative flex gap-2 md:gap-4 items-center whitespace-nowrap'>
+                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-lime-500 bg-opacity-10 text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
+                        <div className='absolute right-0'>
+                            {companyLogo}
+                        </div>
+                    </div>
+                    <h3 className="text-sm sm:text-lg font-semibold xl:text-2xl text-gray-900 dark:text-white">{role}</h3>
+                    {
+                        <TechnologiesTags technologies={technologies} />
+                    }
                 </div>
-            }
-            {
-                <TechnologiesTags technologies={technologies} />
-            }
+            </div>
+            <div className='p-6'>
+                {
+                    (intern) && (
+                        <div className='flex flex-wrap gap-2 items-center mb-2 md:mb-3 '>
+                            <span className='border-yellow-500 text-yellow-600 bg-yellow-500 dark:border-yellow-400 dark:text-yellow-400 dark:bg-yellow-400 dark:bg-opacity-10 inline-block rounded-md w-fit py-1 px-3  bg-opacity-10 text-xs sm:text-base md:text-base xl:text-base'>Intern</span>
+                        </div>
+                    )
+                }
+                <p className={`mb-4 md:mb-6 text-xs sm:text-base xl:text-xl font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
+                {
+                    (tasks.length > 0) &&
+                    <div>
+                        <h3 className='mb-2 md:mb-3 font-semibold text-sm sm:text-lg xl:text-2xl text-gray-900 dark:text-white'>Tasks</h3>
+                        <ul className={`space-y-1 text-xs sm:text-base xl:text-xl list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
+                            {tasks.map((task, index) =>
+                                <li
+                                    key={index}>
+                                    {task}
+                                </li>
+                            )}
+                        </ul>
+                    </div>
+                }
+            </div>
         </li>
     )
 }
@@ -137,12 +147,16 @@ function Work() {
                 <CompanyLogoLabel LogoComponent={DeloitteIcon} />
             </>,
             role: "Software Development Engineer in Test II",
-            description: "Create a custom python framework for E2E automated tests for an e-commerce web page, testing more than 30 locales using Python, Pytest, Selenium, Docker, Jenkins and API integrations with Google Cloud Platform:",
+            description: "Create automated E2E user acceptance tests for an e-commerce web page, testing more than 30 locales in multiple languages using Python, Pytest, Selenium, Docker, Jenkins and API from Google:",
             tasks: [
-                "Create and maintain E2E regression tests.",
-                "Create documentation guides about the framework installation and usage.",
-                "Create Jira / xray tests, test sets, test plans, test executions.",
-                "Run manual user acceptance tests.",
+                "Develop and maintain end-to-end regression tests.",
+                "Create new test cases based on client's new functionalities.",
+                "Keep tests up-to-date with page changes.",
+                "Develop custom pytest plugins to generate customized HTML and Excel reports.",
+                "Create Python scripts for various automation tasks, including converting tests from an Excel document into a CSV format compatible with Jira for test uploads.",
+                "Write documentation for framework installation and usage.",
+                "Create and manage Jira tests, test sets, test plans, and test executions.",
+                "Do manual testing when necessary to ensure product quality."
             ],
             technologies: [
                 "python", "selenium", "docker", "jenkins"
@@ -180,16 +194,16 @@ function Work() {
                     <div className='pb-16 xl:pb-0 xl:mr-16 flex flex-col gap-4 '>
                         <div className="flex flex-col gap-6 text-md leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
                             <p>
-                                I am a passionate software engineer with <strong className="text-transparent">over 3 years</strong> of hands-on experience delivering scalable and maintainable software
-                                development in test using <strong className="text-transparent">Python</strong> mainly and <strong className="text-transparent">Javascript</strong>.
+                                I am a passionate software engineer with <strong className="text-transparent">over 2 years</strong> of hands-on experience delivering scalable and maintainable software
+                                development in test using <strong className="text-transparent">Python</strong>.
                             </p>
                             <p>
                                 During my career <strong className="text-transparent">I have worked with the technologies:</strong> Selenium,
-                                Pytest, Playwright, Google Cloud APIs, Docker, Jenkins and more.
+                                Pytest, Google Cloud APIs, Docker, Jenkins and more.
                             </p>
                             <p>
                                 I have also <strong className="text-transparent">developed personal projects</strong> like <strong className="text-transparent">APIs</strong> with FastAPI
-                                and <strong className="text-transparent">web pages</strong> using React / NextJS / Tailwind / postgreSQL with Supabase.
+                                and <strong className="text-transparent">web pages</strong> using React, Tailwind and Supabase.
                             </p>
                             <p>
                                 Always trying to keep my knowledge updated

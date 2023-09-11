@@ -12,7 +12,7 @@ export default function LinkedinContactBtn() {
                 text-2xl
                 font-bold
                 rounded-2xl
-                animate-[easeIn_0.6s_ease-in-out_0.7s_both,slideFromLeft_0.6s_ease-in-out_0.7s_both]
+                animate-[easeIn_0.6s_ease-in-out_0.7s_both]
                 group
                 px-6
                 py-1

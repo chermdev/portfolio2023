@@ -90,15 +90,15 @@ function WorkCard({ timeStr,
     intern = false
 }) {
     return (
-        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border border-lime-500" : "border border-gray-300 dark:border-stone-800"}`}>
-            <div className={`p-6 xl:p-8 ${active ? "bg-lime-500 bg-opacity-10 dark:bg-lime-500 dark:bg-opacity-10" : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
+        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border border-teal-500 dark:border-purple-500" : "border border-gray-300 dark:border-stone-800"}`}>
+            <div className={`p-6 xl:p-8 ${active ? "bg-teal-500 bg-opacity-10 dark:bg-purple-500 dark:bg-opacity-10" : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
                 {(active) ?
-                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] bg-lime-500 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
+                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] text-teal-500 bg-teal-500 dark:bg-purple-500 dark:text-purple-500 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
                     (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
                 }
                 <div className='flex flex-col gap-4'>
                     <div className='relative flex gap-2 md:gap-4 items-center whitespace-nowrap'>
-                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-lime-500 bg-opacity-10 text-lime-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
+                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-teal-500 bg-opacity-10 dark:bg-purple-500 dark:bg-opacity-10 text-teal-500 dark:text-purple-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
                         <div className='absolute right-0'>
                             {companyLogo}
                         </div>

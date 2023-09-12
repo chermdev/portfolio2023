@@ -98,30 +98,30 @@ function WorkCard({ timeStr,
                 }
                 <div className='flex flex-col gap-4'>
                     <div className='relative flex gap-2 md:gap-4 items-center whitespace-nowrap'>
-                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-teal-500 bg-opacity-10 dark:bg-purple-500 dark:bg-opacity-10 text-teal-500 dark:text-purple-500" : "text-gray-400 dark:text-gray-500"}`}>{timeStr}</time>
+                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-teal-500 bg-opacity-10 dark:bg-purple-500 dark:bg-opacity-10 text-teal-500 dark:text-purple-500" : "text-gray-500 dark:text-gray-500"}`}>{timeStr}</time>
                         <div className='absolute right-0'>
                             {companyLogo}
                         </div>
                     </div>
-                    <h3 className="text-sm sm:text-lg font-semibold xl:text-2xl text-gray-900 dark:text-white">{role}</h3>
+                    <h3 className="text-sm sm:text-lg font-semibold xl:text-2xl text-black dark:text-white">{role}</h3>
+                    {
+                        (intern) && (
+                            <div className='flex flex-wrap gap-2 items-center mb-2 md:mb-3 '>
+                                <span className='border-yellow-500 text-yellow-600 bg-yellow-500 dark:border-yellow-400 dark:text-yellow-400 dark:bg-yellow-400 dark:bg-opacity-10 inline-block rounded-md w-fit py-1 px-3  bg-opacity-10 text-xs sm:text-base md:text-base xl:text-base'>Intern</span>
+                            </div>
+                        )
+                    }
                     {
                         <TechnologiesTags technologies={technologies} />
                     }
                 </div>
             </div>
             <div className='p-6'>
-                {
-                    (intern) && (
-                        <div className='flex flex-wrap gap-2 items-center mb-2 md:mb-3 '>
-                            <span className='border-yellow-500 text-yellow-600 bg-yellow-500 dark:border-yellow-400 dark:text-yellow-400 dark:bg-yellow-400 dark:bg-opacity-10 inline-block rounded-md w-fit py-1 px-3  bg-opacity-10 text-xs sm:text-base md:text-base xl:text-base'>Intern</span>
-                        </div>
-                    )
-                }
                 <p className={`mb-4 md:mb-6 text-xs sm:text-base xl:text-xl font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
                 {
                     (tasks.length > 0) &&
                     <div>
-                        <h3 className='mb-2 md:mb-3 font-semibold text-sm sm:text-lg xl:text-2xl text-gray-900 dark:text-white'>Tasks</h3>
+                        <h3 className='mb-2 md:mb-3 font-semibold text-sm sm:text-lg xl:text-2xl text-black dark:text-white'>Tasks</h3>
                         <ul className={`space-y-1 text-xs sm:text-base xl:text-xl list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
                             {tasks.map((task, index) =>
                                 <li

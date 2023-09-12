@@ -90,15 +90,15 @@ function WorkCard({ timeStr,
     intern = false
 }) {
     return (
-        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border border-teal-500 dark:border-purple-500" : "border border-gray-300 dark:border-stone-800"}`}>
-            <div className={`p-6 xl:p-8 ${active ? "bg-teal-500 bg-opacity-10 dark:bg-purple-500 dark:bg-opacity-10" : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
+        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border border-teal-400" : "border border-gray-300 dark:border-stone-800"}`}>
+            <div className={`p-6 xl:p-8 ${active ? "bg-opacity-10 bg-gradient-to-br from-teal-400/10 to-teal-600/10 dark:from-sky-500/10 dark:to-teal-500/10  " : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
                 {(active) ?
-                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] text-teal-500 bg-teal-500 dark:bg-purple-500 dark:text-purple-500 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
+                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] text-teal-400 bg-teal-400 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
                     (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
                 }
                 <div className='flex flex-col gap-4'>
                     <div className='relative flex gap-2 md:gap-4 items-center whitespace-nowrap'>
-                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-teal-500 bg-opacity-10 dark:bg-purple-500 dark:bg-opacity-10 text-teal-500 dark:text-purple-500" : "text-gray-500 dark:text-gray-500"}`}>{timeStr}</time>
+                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-teal-400 bg-opacity-10 text-teal-400" : "text-gray-500 dark:text-gray-500"}`}>{timeStr}</time>
                         <div className='absolute right-0'>
                             {companyLogo}
                         </div>
@@ -188,11 +188,11 @@ function Work() {
 
     return (
         <section id="work" className="py-16 md:py-20 bg-[var(--bg-color)]">
-            <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)] bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-teal-400 dark:to-blue-600'>
-                <h1 className='text-4xl md:text-3xl xl:text-6xl font-bold mb-6 md:mb-10 text-transparent'>Work Experience</h1>
+            <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)]'>
+                <h1 className='w-fit bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-sky-500 dark:to-teal-500 text-4xl md:text-3xl xl:text-6xl font-bold mb-6 md:mb-10 text-transparent'>Work Experience</h1>
                 <div className='flex justify-center items-center flex-col xl:flex-row xl:items-start'>
                     <div className='pb-16 xl:pb-0 xl:mr-16 flex flex-col gap-4 '>
-                        <div className="flex flex-col gap-6 text-md leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
+                        <div className="bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-sky-500 dark:to-teal-500 flex flex-col gap-6 text-md leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
                             <p>
                                 I am a passionate software engineer with <strong className="text-transparent">over 2 years</strong> of hands-on experience delivering scalable and maintainable software
                                 development in test using <strong className="text-transparent">Python</strong>.

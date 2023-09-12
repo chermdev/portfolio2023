@@ -100,7 +100,7 @@ function SocialFooter() {
 
 function Footer() {
     return (
-        <footer className="bg-gradient-to-b from-teal-400 to-teal-600 text-white dark: dark:from-sky-500 dark:to-blue-500">
+        <footer className="bg-gradient-to-br from-teal-400 to-teal-600 text-white dark: dark:from-sky-500 dark:to-teal-500">
             {/* <ContactForm /> */}
             <SocialFooter />
         </footer>

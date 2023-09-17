@@ -46,7 +46,7 @@ export default function LinkedinContactBtn() {
                 ">
 
                 <LinkedinIcon className="fill-current w-[2.5rem] h-[2.5rem]" />
-                <span class="
+                <span className="
                 group-hover:opacity-100
                 opacity-0
                 group-hover:visible

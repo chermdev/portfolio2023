@@ -187,7 +187,7 @@ function Work() {
     ]
 
     return (
-        <section id="work" className="py-16 md:py-20 bg-[var(--bg-color)]">
+        <section id="work" className="py-16 md:py-20 bg-bgcolor">
             <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)]'>
                 <h1 className='w-fit bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-sky-500 dark:to-teal-500 text-4xl md:text-3xl xl:text-6xl font-bold mb-6 md:mb-10 text-transparent'>Work Experience</h1>
                 <div className='flex justify-center items-center flex-col xl:flex-row xl:items-start'>

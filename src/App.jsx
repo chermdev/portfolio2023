@@ -7,11 +7,11 @@ import { ReactComponent as BlobAnimationDark } from './assets/blob/blobanimation
 
 function App() {
 
-    const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
+    const { darkMode } = useContext(DarkModeContext)
 
     return (
         <div className="App">
-            <div className='relative bg-gradient-to-b from-transparent to-[var(--bg-color)] overflow-hidden flex flex-col items-center'>
+            <div className='relative bg-gradient-to-b from-transparent to-bgcolor overflow-hidden flex flex-col items-center'>
                 <Home2 />
                 <div className='absolute z-[-1] top-16 overflow-hidden animate-[easeIn_1s_ease-in-out_0.3s_both]'>
                     {

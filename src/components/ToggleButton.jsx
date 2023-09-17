@@ -6,29 +6,31 @@ import { DarkModeContext } from '../context/DarkModeContext'
 
 function ToggleButton() {
 
-    const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
+    const { darkMode, setDarkMode, toggleDarkMode } = useContext(DarkModeContext)
+
+    useEffect(() => {
+        const mq = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        );
+
+        if (mq.matches) {
+            setDarkMode(true);
+        }
+
+        // This callback will fire if the perferred color scheme changes without a reload
+        mq.addEventListener("change", (evt) => setDarkMode(evt.matches));
+    }, [])
+
 
     useEffect(() => {
         if (darkMode) {
-            document.documentElement.style
-                .setProperty('--bg-color', 'rgb(20, 20, 20)')
-            document.documentElement.style
-                .setProperty('--bg-navbar-color', 'rgba(25, 25, 25, 0.6)')
-            document.documentElement.style
-                .setProperty('--font-color', 'rgb(255, 255, 255)')
-            document.documentElement.style
-                .setProperty('--card-color', 'rgb(23, 23, 23)')
-            document.documentElement.classList.add("dark")
+            // Whenever the user explicitly chooses dark mode
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
         } else {
-            document.documentElement.style
-                .setProperty('--bg-color', 'rgb(240, 240, 240)')
-            document.documentElement.style
-                .setProperty('--bg-navbar-color', 'rgba(240, 240, 240, 0.6)')
-            document.documentElement.style
-                .setProperty('--font-color', 'rgb(20, 20, 20)')
-            document.documentElement.style
-                .setProperty('--card-color', 'rgb(234, 234, 234)')
-            document.documentElement.classList.remove("dark")
+            // Whenever the user explicitly chooses light mode
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
         }
     }, [darkMode])
 

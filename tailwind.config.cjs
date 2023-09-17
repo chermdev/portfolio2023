@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
     content: [
         "./src/**/*.{js,jsx,ts,tsx}",
@@ -6,6 +7,12 @@ module.exports = {
     darkMode: 'class',
     theme: {
         extend: {
+            colors: {
+                bgcolor: "rgb(var(--bg-color) / <alpha-value>)",
+                bgnavbarcolor: "rgb(var(--bg-navbar-color) / <alpha-value>)",
+                fontcolor: "rgb(var(--font-color) / <alpha-value>)",
+                cardcolor: "rgb(var(--card-color) / <alpha-value>)",
+            },
             keyframes: {
                 pulseActive: {
                     '0%': {

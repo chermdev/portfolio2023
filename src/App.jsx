@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import Work from './pages/Work'
 import Home2 from './pages/Home2'
-import { DarkModeContext } from './context/DarkModeContext'
+import { useDarkMode } from './context/ThemeContext'
 import { ReactComponent as BlobAnimation } from './assets/blob/blobanimation.svg'
 import { ReactComponent as BlobAnimationDark } from './assets/blob/blobanimation-dark.svg'
 
 function App() {
 
-    const { darkMode } = useContext(DarkModeContext)
+    const { darkMode } = useDarkMode()
 
     return (
         <div className="App">

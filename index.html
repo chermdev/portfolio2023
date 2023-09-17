@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmanuel Hernandez Portfolio</title>
     <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            localStorage.theme = 'dark'
-            document.documentElement.classList.add('dark')
-        } else {
-            localStorage.theme = 'light'
-            document.documentElement.classList.remove('dark')
+        if (!('theme' in localStorage)) {
+            localStorage.theme = 'system'
         }
     </script>
   

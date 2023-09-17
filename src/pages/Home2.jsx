@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { DarkModeContext } from './../context/DarkModeContext'
+import { useTheme } from '../context/ThemeContext'
 import { ReactComponent as LinkedinIcon } from './../assets/logos/technologies/linkedin.svg'
 import { ReactComponent as BlobAnimation } from './../assets/blob/blobanimation.svg'
 import { ReactComponent as BlobAnimationDark } from './../assets/blob/blobanimation-dark.svg'
@@ -10,8 +10,6 @@ import About from './About'
 
 export default function Home2() {
 
-
-    const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
     return (
         <section id='home' className='flex flex-col items-center' >
             <div className='pt-64 flex flex-col justify-center items-center gap-8 md:gap-16'>

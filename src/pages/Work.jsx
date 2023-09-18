@@ -90,15 +90,15 @@ function WorkCard({ timeStr,
     intern = false
 }) {
     return (
-        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border border-teal-400" : "border border-gray-300 dark:border-stone-800"}`}>
-            <div className={`p-6 xl:p-8 ${active ? "bg-opacity-10 bg-gradient-to-br from-teal-400/10 to-teal-600/10 dark:from-sky-500/10 dark:to-teal-500/10  " : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
+        <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border-2 border-teal-400 dark:border-cyan-400" : "border border-gray-300 dark:border-stone-800"}`}>
+            <div className={`p-6 xl:p-8 ${active ? "bg-opacity-10 bg-gradient-to-br from-transparent to-teal-400/10 dark:from-transparent dark:to-cyan-400/10" : "bg-slate-500 bg-opacity-10 dark:bg-slate-500 dark:bg-opacity-10"}`}>
                 {(active) ?
-                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] text-teal-400 bg-teal-400 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
+                    (<div className="absolute w-3 h-3 rounded-full mt-1.5 -left-[0.4rem] text-teal-400 bg-teal-500 dark:text-cyan-400 dark:bg-cyan-400 animate-[pulseActive_2s_ease-in-out_infinite]"></div>) :
                     (<div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-[0.4rem] border border-white dark:border-gray-900 dark:bg-gray-700"></div>)
                 }
                 <div className='flex flex-col gap-4'>
                     <div className='relative flex gap-2 md:gap-4 items-center whitespace-nowrap'>
-                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-normal leading-none ${(active) ? "rounded-md px-2 bg-teal-400 bg-opacity-10 text-teal-400" : "text-gray-500 dark:text-gray-500"}`}>{timeStr}</time>
+                        <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-medium leading-none ${(active) ? "rounded-md px-2 bg-teal-500/10 text-teal-500 dark:text-cyan-400 dark:bg-cyan-400/10" : "text-gray-500 dark:text-gray-500"}`}>{timeStr}</time>
                         <div className='absolute right-0'>
                             {companyLogo}
                         </div>
@@ -117,12 +117,12 @@ function WorkCard({ timeStr,
                 </div>
             </div>
             <div className='p-6'>
-                <p className={`mb-4 md:mb-6 text-xs sm:text-base xl:text-xl font-normal text-gray-800 ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
+                <p className={`mb-4 md:mb-6 text-xs sm:text-base xl:text-xl font-normal text-gray-800 ${(active) ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-400"}`}>{description}</p>
                 {
                     (tasks.length > 0) &&
                     <div>
                         <h3 className='mb-2 md:mb-3 font-semibold text-sm sm:text-lg xl:text-2xl text-black dark:text-white'>Tasks</h3>
-                        <ul className={`space-y-1 text-xs sm:text-base xl:text-xl list-disc list-inside ${(active) ? "text-gray-800 dark:text-gray-300" : "text-gray-400 dark:text-gray-400"}`}>
+                        <ul className={`space-y-1 text-xs sm:text-base xl:text-xl list-disc list-inside ${(active) ? "text-gray-900 dark:text-gray-100" : "text-gray-400 dark:text-gray-400"}`}>
                             {tasks.map((task, index) =>
                                 <li
                                     key={index}>
@@ -189,10 +189,10 @@ function Work() {
     return (
         <section id="work" className="py-16 md:py-20 bg-bgcolor">
             <div className='m-auto w-[var(--max-page-width)] max-w-[var(--max-section-width)]'>
-                <h1 className='w-fit bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-sky-500 dark:to-teal-500 text-4xl md:text-3xl xl:text-6xl font-bold mb-6 md:mb-10 text-transparent'>Work Experience</h1>
+                <h1 className='w-fit bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-cyan-400 dark:to-cyan-600 text-4xl md:text-3xl xl:text-6xl font-bold mb-6 md:mb-10 text-transparent'>Work Experience</h1>
                 <div className='flex justify-center items-center flex-col xl:flex-row xl:items-start'>
                     <div className='pb-16 xl:pb-0 xl:mr-16 flex flex-col gap-4 '>
-                        <div className="bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-sky-500 dark:to-teal-500 flex flex-col gap-6 text-md leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
+                        <div className="bg-gradient-to-r bg-clip-text from-teal-400 to-teal-600  dark:from-cyan-400 dark:to-cyan-600 flex flex-col gap-6 text-md leading-6 tracking-wide md:text-xl xl:text-2xl break-word">
                             <p>
                                 I am a passionate software engineer with <strong className="text-transparent">over 2 years</strong> of hands-on experience delivering scalable and maintainable software
                                 development in test using <strong className="text-transparent">Python</strong>.

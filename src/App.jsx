@@ -16,8 +16,8 @@ function App() {
                 <div className='absolute z-[-1] top-16 overflow-hidden animate-[easeIn_1s_ease-in-out_0.3s_both]'>
                     {
                         darkMode ?
-                            <BlobAnimationDark className="w-[max(120vh,100vw)] rotate-45" /> :
-                            <BlobAnimation className="w-[max(120vh,100vw)] rotate-45" />
+                            <BlobAnimationDark className="w-[max(120vh,100vw)] rotate-90" /> :
+                            <BlobAnimation className="w-[max(120vh,100vw)] rotate-90" />
                     }
                 </div>
             </div>

@@ -56,7 +56,7 @@ export default function ResumeContactBtn() {
             bg-opacity-20
             outline-2
             outline-offset-0
-            outline-[#de2d2d]
+            outline-white/40
             outline-none
             hover:text-white
             hover:outline-0
@@ -66,7 +66,7 @@ export default function ResumeContactBtn() {
 
             dark:text-[#f34545]
             dark:bg-black
-            dark:outline-[#f34545]
+            dark:outline-white/10
             dark:hover:text-white
             dark:bg-opacity-20
             dark:hover:bg-opacity-100

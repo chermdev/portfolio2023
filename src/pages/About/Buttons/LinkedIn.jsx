@@ -6,7 +6,8 @@ export default function LinkedinContactBtn() {
             <a href="https://www.linkedin.com/in/emmanuelhdz"
                 target="_blank"
                 alt="linkedin"
-                className="inline-flex
+                className="relative
+                inline-flex
                 items-center
                 justify-center
                 text-2xl
@@ -16,33 +17,24 @@ export default function LinkedinContactBtn() {
                 group
                 px-6
                 py-1
+                shadow-md hover:shadow-black/30 hover:shadow-lg
+                bg-gradient-to-b
+                outline outline-2 outline-offset-0
+                backdrop-blur-sm hover:outline-0
+                
+                text-teal-500 outline-white/40
+                from-white/10 to-white/20 
+                
+                dark:text-sky-400 dark:outline-white/10
+                dark:from-black/10 dark:to-black/20
 
-                text-[#0e2550]
-                bg-white
-                bg-opacity-20
-                outline-2
-                outline-offset-0
-                outline-[#0e2550]
-                outline-none
-                hover:text-white
-                hover:outline-0
-                hover:bg-opacity-100
-                hover:bg-[#0aa3f6]
-                backdrop-blur-lg
+                hover:text-white 
+                hover:bg-opacity-100 
+                hover:bg-[#00a4fc]
 
-                dark:text-[#c9e3ec]
-                dark:bg-black
-                dark:outline-[#c9e3ec]
                 dark:hover:text-white
-                dark:bg-opacity-20
                 dark:hover:bg-opacity-100
                 dark:hover:bg-[#00a4fc]
-                dark:backdrop-blur-lg
-
-                shadow-dark/30
-                shadow-md
-                hover:shadow-black/30
-                hover:shadow-lg
                 ">
 
                 <LinkedinIcon className="fill-current w-[2.5rem] h-[2.5rem]" />

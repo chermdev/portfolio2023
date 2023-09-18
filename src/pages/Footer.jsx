@@ -87,7 +87,7 @@ function ContactForm() {
 
 function SocialFooter() {
     return (
-        <section id="social" className="flex gap-2 md:gap-4 py-6 items-center justify-center bg-black bg-opacity-20">
+        <section id="social" className="flex gap-2 md:gap-4 py-6 items-center justify-center">
             <a className='flex items-center justify-center w-[32px] h-[32px] rounded-md p-[2px] bg-opacity-20 dark:bg-opacity-20 hover:bg-opacity-100 dark:hover:bg-opacity-100 transition-all duration-300 overflow-hidden bg-black dark:bg-black text-white hover:text-white dark:hover:text-white hover:bg-black' href="https://github.com/chermdev" target="_blank" alt="github">
                 <GithubIcon className="fill-current" />
             </a>
@@ -100,7 +100,7 @@ function SocialFooter() {
 
 function Footer() {
     return (
-        <footer className="bg-gradient-to-br from-teal-400 to-teal-600 text-white dark: dark:from-sky-500 dark:to-teal-500">
+        <footer className="bg-gradient-to-br text-white from-teal-400 to-teal-600 dark:from-cyan-400 dark:to-cyan-600">
             {/* <ContactForm /> */}
             <SocialFooter />
         </footer>

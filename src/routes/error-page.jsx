@@ -2,11 +2,11 @@ import { Link, useRouteError } from "react-router-dom";
 
 
 export default function ErrorPage() {
-    const error = useRouteError();
-    console.error(error);
+    const error = useRouteError()
+    console.error(error)
     return (
         <main class="h-screen w-screen flex flex-col justify-center items-center overflow-hidden bg-black">
-            <img className="max-w-[150px]" src="src/assets/logos/avatar.png" />
+            <img className="max-w-[150px]" src="avatar.png" />
             <div className="relative flex items-center justify-center">
                 <h1 class="text-9xl font-extrabold text-white text-center tracking-wide leading-[8rem]">404</h1>
                 <div class="bg-cyan-500 px-2 text-xl rounded text-black font-bold rotate-6 absolute bottom-1">

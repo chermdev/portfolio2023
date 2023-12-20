@@ -3,8 +3,10 @@ import { ReactComponent as Github } from './../assets/logos/technologies/github.
 import { ReactComponent as Python } from './../assets/logos/technologies/python-color.svg'
 import { ReactComponent as Javascript } from './../assets/logos/technologies/javascript-color.svg'
 import ToggleButton from './ToggleButton'
+import { Link } from 'react-router-dom'
 
-function NavbarLi({ children, current, id }) {
+
+function NavbarLinkSection({ children, current, id }) {
 
     return (
         <li className={` ${current == id ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}`}>
@@ -12,6 +14,16 @@ function NavbarLi({ children, current, id }) {
         </li>
     )
 }
+
+function NavbarLinkRoute({ children, current, id }) {
+
+    return (
+        <li className={` ${current == id ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}`}>
+            <a href={`/${id}`}>{children}</a>
+        </li>
+    )
+}
+
 function NavbarMenuButton({ setNavbar, navbar }) {
     return (
         <div className="md:hidden flex items-center justify-center">
@@ -76,15 +88,18 @@ function NavbarLogo() {
 function NavbarItems({ current, navbarStyle }) {
     return (
         <ul className={`${navbarStyle}`}>
-            <NavbarLi key={1} current={current} id={"home"}>
+            <NavbarLinkSection key={1} current={current} id={"home"}>
                 Home
-            </NavbarLi>
-            {/* <NavbarLi key={2} current={current} id={"about"}>
-                About me
-            </NavbarLi> */}
-            <NavbarLi key={2} current={current} id={"work"}>
+            </NavbarLinkSection>
+            <NavbarLinkSection key={2} current={current} id={"work"}>
                 Work experience
-            </NavbarLi>
+            </NavbarLinkSection>
+            <NavbarLinkRoute key={3} current={current} id={"resume"}>
+                <div className='relative'>
+                    Resume
+                    <span className='absolute bg-green-800/80 rounded-md text-[0.6rem] text-green-400 font-bold px-[5px] tracking-wider leading-4 top-[-5px] right-[-10px] rotate-12'>New</span>
+                </div>
+            </NavbarLinkRoute>
         </ul>
     )
 }

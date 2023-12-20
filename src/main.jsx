@@ -1,17 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import Navbar from './components/Navbar'
 import './index.css'
 import { ThemeProvider } from './context/ThemeContext'
-import Footer from './pages/Footer'
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import ErrorPage from './routes/error-page'
+import Resume from './routes/resume/index'
+import Root from './routes/root/index'
+
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />,
+    }, {
+        path: "/resume",
+        element: <Resume />
+    }
+]);
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <ThemeProvider>
-            <Navbar />
-            <App />
-            <Footer />
+            <RouterProvider router={router} />
         </ThemeProvider>
     </React.StrictMode>,
 )

@@ -4,9 +4,9 @@ export default function ComingSoon() {
     return (
         <main class="h-screen w-screen flex flex-col justify-center items-center  overflow-hidden bg-black">
             <img src="avatar150.png" />
-            <div className="relative flex items-center justify-center">
-                <h1 class="text-7xl font-extrabold text-white text-center tracking-wide leading-[8rem]">Coming soon</h1>
-                <div class="bg-yellow-500 px-2 text-xl rounded text-black font-bold rotate-6 absolute bottom-1">
+            <div className="relative flex items-center justify-center mt-4 mb-10">
+                <h1 class="text-7xl font-extrabold text-white text-center tracking-wide leading-[2.2rem]">Coming soon</h1>
+                <div class="bg-yellow-500 px-2 text-xl rounded text-black font-bold rotate-6 absolute bottom-[-35px]">
                     Work in progress
                 </div>
             </div>

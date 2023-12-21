@@ -3,24 +3,28 @@ import { ReactComponent as Github } from './../assets/logos/technologies/github.
 import { ReactComponent as Python } from './../assets/logos/technologies/python-color.svg'
 import { ReactComponent as Javascript } from './../assets/logos/technologies/javascript-color.svg'
 import ToggleButton from './ToggleButton'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { NavHashLink } from 'react-router-hash-link';
 
-
-function NavbarLinkSection({ children, current, id }) {
+function NavbarLinkHash({ children, to, current }) {
 
     return (
-        <li className={` ${current == id ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}`}>
-            <a href={`#${id}`}>{children}</a>
-        </li>
+        <NavHashLink
+            to={`${to}`}
+            className={({ isActive }) => isActive && to.includes(current) ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}>
+            {children}
+        </NavHashLink>
     )
 }
 
-function NavbarLinkRoute({ children, current, id }) {
+function NavbarLinkRoute({ children, to }) {
 
     return (
-        <li className={` ${current == id ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}`}>
-            <a href={`${id}`}>{children}</a>
-        </li>
+        <NavLink
+            to={`${to}`}
+            className={({ isActive }) => isActive ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}>
+            {children}
+        </NavLink>
     )
 }
 
@@ -69,7 +73,7 @@ function NavbarLogo() {
 
     return (
         <div>
-            <a href="/">
+            <Link to="/">
                 <div className='flex flex-row items-center gap-2'>
                     <h2 className="text-lg sm:text-xl font-bold text-fontcolor">Emmanuel Hdz
                     </h2>
@@ -80,27 +84,27 @@ function NavbarLogo() {
                         </Javascript>
                     </div>
                 </div>
-            </a >
+            </Link >
         </div>
     )
 }
 
 function NavbarItems({ current, navbarStyle }) {
     return (
-        <ul className={`${navbarStyle}`}>
-            <NavbarLinkRoute key={1} current={current} id={"/#home"}>
+        <nav className={`${navbarStyle}`}>
+            <NavbarLinkHash to={"/#home"} current={current}>
                 Home
-            </NavbarLinkRoute>
-            <NavbarLinkRoute key={2} current={current} id={"/#work"}>
+            </NavbarLinkHash>
+            <NavbarLinkHash to={"/#work"} current={current}>
                 Work experience
-            </NavbarLinkRoute>
-            <NavbarLinkRoute key={3} current={current} id={"/resume"}>
+            </NavbarLinkHash>
+            <NavbarLinkRoute to={"/resume"}>
                 <div className='relative'>
                     Resume
                     <span className='absolute bg-green-800/80 rounded-md text-[0.6rem] text-green-400 font-bold px-[5px] tracking-wider leading-4 top-[-5px] right-[-10px] rotate-12'>New</span>
                 </div>
             </NavbarLinkRoute>
-        </ul>
+        </nav>
     )
 }
 
@@ -116,12 +120,12 @@ function Navbar() {
 
     useEffect(
         () => {
-            const sections = document.querySelectorAll('section')
             const handleScroll = () => {
+                const sections = document.querySelectorAll('section')
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop
                     const sectionHeight = section.clientHeight
-                    if (window.scrollY >= (sectionTop - 100)) {
+                    if (window.scrollY >= (sectionTop - 400)) {
                         setCurrent(section.id)
                     }
                 })

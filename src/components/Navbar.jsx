@@ -19,7 +19,7 @@ function NavbarLinkRoute({ children, current, id }) {
 
     return (
         <li className={` ${current == id ? "text-black dark:text-white font-semibold" : "text-gray-800 dark:text-gray-400 hover:text-gray-800 hover:dark:text-white"}`}>
-            <a href={`/${id}`}>{children}</a>
+            <a href={`${id}`}>{children}</a>
         </li>
     )
 }
@@ -88,13 +88,13 @@ function NavbarLogo() {
 function NavbarItems({ current, navbarStyle }) {
     return (
         <ul className={`${navbarStyle}`}>
-            <NavbarLinkSection key={1} current={current} id={"home"}>
+            <NavbarLinkRoute key={1} current={current} id={"/#home"}>
                 Home
-            </NavbarLinkSection>
-            <NavbarLinkSection key={2} current={current} id={"work"}>
+            </NavbarLinkRoute>
+            <NavbarLinkRoute key={2} current={current} id={"/#work"}>
                 Work experience
-            </NavbarLinkSection>
-            <NavbarLinkRoute key={3} current={current} id={"resume"}>
+            </NavbarLinkRoute>
+            <NavbarLinkRoute key={3} current={current} id={"/resume"}>
                 <div className='relative'>
                     Resume
                     <span className='absolute bg-green-800/80 rounded-md text-[0.6rem] text-green-400 font-bold px-[5px] tracking-wider leading-4 top-[-5px] right-[-10px] rotate-12'>New</span>

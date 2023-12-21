@@ -15,8 +15,8 @@ export default function Resume() {
         documentTitle: 'CV_HERNANDEZ_MONCADA'
     });
     return (
-        <main className='min-h-screen'>
-            <section ref={componentRef} className='py-10 px-12 bg-white max-w-[760px] md:max-h-[1050px] m-auto text-xs divide-y-2 tracking-wider'>
+        <main className='min-h-screen mt-16 bg-gradient-to-b from-transparent to-white/40'>
+            <section ref={componentRef} className='py-10 px-12 bg-white text-black max-w-[760px] md:max-h-[1050px] m-auto text-xs divide-y-2 tracking-wider'>
                 <header className='flex flex-col md:flex-row justify-between gap-4 pb-2'>
                     <div className='flex flex-col gap-2'>
                         <div>
@@ -115,8 +115,8 @@ export default function Resume() {
                 </section>
             </section>
             <footer className='sticky flex items-center justify-center bottom-0 gap-8 bg-gradient-to-b from-transparent to-black/30 py-4 w-full'>
-                <Link to="/" alt="go back" className="w-fit inline-flex items-center justify-center font-medium rounded-2xl hover:animate-[wiggle_0.5s_ease-in-out_infinite] group px-6 py-3 text-black bg-white/60 outline-2 outline-offset-0 outline-white/40 hover:text-white hover:outline-0 hover:bg-opacity-100 hover:bg-black backdrop-blur-sm dark:text-black dark:bg-black dark:outline-white/10 dark:hover:text-white dark:bg-opacity-20 dark:hover:bg-opacity-100 dark:hover:bg-black dark:backdrop-blur-sm  shadow-dark/30 shadow-md hover:shadow-black/30 hover:shadow-lg text-center">Go back</Link>
-                <button onClick={handlePrint} target="_blank" alt="download pdf" className="w-fit inline-flex items-center justify-center font-medium rounded-2xl hover:animate-[wiggle_0.5s_ease-in-out_infinite] group px-6 py-3 text-[#de2d2d] bg-white/60 outline-2 outline-offset-0 outline-[#f34545] hover:text-white hover:outline-0 hover:bg-opacity-100 hover:bg-[#d61818] backdrop-blur-sm  dark:text-[#f34545] dark:bg-black dark:outline-white/10 dark:hover:text-white dark:bg-opacity-20 dark:hover:bg-opacity-100 dark:hover:bg-[#d61818] dark:backdrop-blur-sm  shadow-dark/30 shadow-md hover:shadow-black/30 hover:shadow-lg text-center">Download PDF</button>
+                <Link to="/" alt="go back" className="w-fit inline-flex items-center justify-center font-medium rounded-2xl hover:animate-[wiggle_0.5s_ease-in-out_infinite] group px-6 py-3 text-black bg-white/60 outline-2 outline-offset-0 outline-white/40 hover:text-white hover:outline-0 hover:bg-opacity-100 hover:bg-black backdrop-blur-sm dark:text-black dark:bg-white/80 dark:outline-white/10 dark:hover:text-white dark:hover:bg-opacity-100 dark:hover:bg-black dark:backdrop-blur-sm  shadow-dark/30 shadow-md hover:shadow-black/30 hover:shadow-lg text-center">Go back</Link>
+                <button onClick={handlePrint} target="_blank" alt="download pdf" className="w-fit inline-flex items-center justify-center font-medium rounded-2xl hover:animate-[wiggle_0.5s_ease-in-out_infinite] group px-6 py-3 text-[#de2d2d] bg-white/60 outline-2 outline-offset-0 outline-[#f34545] hover:text-white hover:outline-0 hover:bg-opacity-100 hover:bg-[#d61818] backdrop-blur-sm  dark:text-[#f34545] dark:bg-white/80 dark:outline-white/10 dark:hover:text-white dark:hover:bg-opacity-100 dark:hover:bg-[#d61818] dark:backdrop-blur-sm  shadow-dark/30 shadow-md  hover:shadow-black/30 hover:shadow-lg text-center">Download PDF</button>
             </footer>
         </main>
     )

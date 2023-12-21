@@ -9,6 +9,7 @@ import {
 import ErrorPage from './routes/error-page'
 import Resume from './routes/resume/index'
 import Root from './routes/root/index'
+import App from './pages/App';
 
 
 const router = createBrowserRouter([
@@ -16,10 +17,17 @@ const router = createBrowserRouter([
         path: "/",
         element: <Root />,
         errorElement: <ErrorPage />,
-    }, {
-        path: "/resume",
-        element: <Resume />
-    }
+        children: [
+            {
+                path: "/",
+                element: <App />
+            },
+            {
+                path: "/resume",
+                element: <Resume />
+            }
+        ]
+    },
 ]);
 
 

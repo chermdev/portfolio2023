@@ -1,44 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ResumeContactBtn() {
-
-    const [isRolled, setIsRolled] = useState(true)
-    const [rolled, setRolled] = useState(0)
-
-    useEffect(() => {
-        // if rolled is > 0 then setIsRolled = true
-        if (rolled >= 1) {
-            setIsRolled(true)
-        }
-    }, [rolled])
-
     return (
-        <div className={`animate-[easeIn_0.6s_ease-in-out_0.5s_both] flex flex-col items-center gap-4 ${(rolled > 0) ? "bg-purple-500 bg-opacity-10 backdrop-blur-xl p-6 rounded-2xl shadow-xl" : ""} `}>
-            {
-                (rolled == 1) && (
-                    <>
-                        <img className='rounded-xl max-w-[200px]' src={"https://media.tenor.com/RpghvJN-ucgAAAAM/sorry.gif"} />
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=ObT1Sj8v_RmDScWa" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen autoplay></iframe>
-                        <p className="text-md md:text-xl font-medium tracking-wider leading-tight  text-white">
-                            Little joke, here is the CV:
-                        </p>
-                    </>
-                )
-            }
-
-
-            <button
-                onClick={() => {
-                    if (!isRolled) {
-                        // window.open("https://youtu.be/dQw4w9WgXcQ?si=FXRQXFYEcpaWq6vx", "_blank")
-                        setRolled(rolled + 1)
-                    }
-                    else {
-                        window.open("https://drive.google.com/file/d/1pl2hFscsL_de1a6o6zHLBx5l-YOfhcuR", "_blank")
-                    }
-                }}
-                target='_blank'
-                alt="cv"
+        <div className={`animate-[easeIn_0.6s_ease-in-out_0.5s_both] flex flex-col items-center gap-4 `}>
+            <Link
+                to="/resume"
+                alt="resume page"
                 className="
                 w-fit
                 inline-flex
@@ -96,7 +63,7 @@ export default function ResumeContactBtn() {
                 text-gray-100
                 p-2
                 ">Open CV!</span>
-            </button>
+            </Link>
         </div >
     )
 }

@@ -17,7 +17,7 @@ export default function Resume() {
     return (
         <main className='min-h-screen mt-16 bg-gradient-to-b from-transparent to-white/40'>
             <section ref={componentRef} className='py-10 px-12 bg-white text-black max-w-[760px] md:max-h-[1050px] m-auto text-xs divide-y-2 tracking-wider'>
-                <header className='flex flex-col md:flex-row justify-between gap-4 pb-2'>
+                <header className='flex flex-wrap justify-between gap-4 pb-2'>
                     <div className='flex flex-col gap-2'>
                         <div>
                             <h1 id="name" className='text-xl font-bold'>Carlos Emmanuel Hernández Moncada</h1>
@@ -38,11 +38,11 @@ export default function Resume() {
                             </div>
                         </div>
                     </div>
-                    <div className='hidden md:block'>
+                    <div>
                         <QRIcon className="w-[150px]" />
                     </div>
                 </header>
-                <section id="contact" className='flex flex-col md:flex-row justify-between py-2'>
+                <section id="contact" className='flex flex-wrap justify-between py-2'>
                     <a className='flex flex-row items-center gap-2' href="https://www.linkedin.com/in/emmanuelhdz" target="_blank" rel="noreferrer">
                         <LinkedinIcon className="w-[16px] h-[16px]" />
                         https://www.linkedin.com

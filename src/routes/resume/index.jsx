@@ -101,7 +101,7 @@ export default function Resume() {
                 <section id="skills" className='py-2'>
                     <h2 className='font-bold text-base mb-1'>Skills</h2>
                     <ul className='ml-4 list-disc list-inside'>
-                        <li className='font-medium'>Self-thaught, teamwork, problem-solving, creative.</li>
+                        <li className='font-medium'>Self-taught, teamwork, problem-solving, creative.</li>
                         <li>2+ years of hands-on Python experience working with Selenium, Pytest and more. OOP, Regex, Locators, Decorators, Context Managers, Comprehensions, File handling, Web Scraping, APIs, etc.</li>
                         <li>Front-end knowledge used for web testing and personal web projects. HTML, CSS and Javascript.</li>
                         <li>Git, Bitbucket, APIs knowledge and Postman.</li>

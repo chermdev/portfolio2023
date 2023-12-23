@@ -1,10 +1,4 @@
-import { useContext } from 'react'
-import { useTheme } from '../context/ThemeContext'
-import { ReactComponent as LinkedinIcon } from './../assets/logos/technologies/linkedin.svg'
-import { ReactComponent as BlobAnimation } from './../assets/blob/blobanimation.svg'
-import { ReactComponent as BlobAnimationDark } from './../assets/blob/blobanimation-dark.svg'
 import Contact from './About/Contact'
-import Description from './About/Description'
 import ResumeContactBtn from './About/Buttons/Resume'
 import About from './About'
 

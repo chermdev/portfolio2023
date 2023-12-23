@@ -9,18 +9,18 @@ import {
 import ErrorPage from './routes/error-page'
 import Resume from './routes/resume/index'
 import Root from './routes/root/index'
-import App from './pages/App';
+import App from './App';
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <App />,
         errorElement: <ErrorPage />,
         children: [
             {
                 path: "/",
-                element: <App />
+                element: <Root />
             },
             {
                 path: "/resume",

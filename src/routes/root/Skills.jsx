@@ -1,6 +1,5 @@
 import React from "react";
 import "./Skills.css"
-import Section from './Section'
 
 function Card() {
     return (
@@ -24,7 +23,7 @@ function Skills() {
     }
 
     return (
-        <Section id={"skills"}>
+        <section id={"skills"} className="pt-16 sm:pt-20">
             <h2>Skills</h2>
             <div id="cards" className="flex items-center justify-center flex-wrap gap-2" onMouseMove={trackMouse}>
                 {[...Array(6)].map((x, i) =>
@@ -33,7 +32,7 @@ function Skills() {
             </div>
             {/* <div className="flex items-center justify-center h-min p-8 min-h-screen">
       </div> */}
-        </Section>
+        </section>
     )
 }
 

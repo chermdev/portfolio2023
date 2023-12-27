@@ -1,8 +1,9 @@
-import Work from './Work'
-import Home from './Home'
 import { useDarkMode } from '../../context/ThemeContext'
 import { ReactComponent as BlobAnimation } from '../../assets/blob/blobanimation.svg'
 import { ReactComponent as BlobAnimationDark } from '../../assets/blob/blobanimation-dark.svg'
+import Work from './Work'
+import Home from './Home'
+import Projects from './Projects'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 </div>
             </div>
             <Work />
+            <Projects />
         </div>
     )
 }

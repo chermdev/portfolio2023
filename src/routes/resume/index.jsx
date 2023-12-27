@@ -39,7 +39,7 @@ export default function Resume() {
                         </div>
                     </div>
                     <div>
-                        <QRIcon className="w-[150px]" />
+                        <QRIcon className="w-[150px] fill-current" />
                     </div>
                 </header>
                 <section id="contact" className='flex flex-wrap justify-between py-2'>

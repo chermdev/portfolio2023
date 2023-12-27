@@ -1,13 +1,13 @@
+const Project = ({ children }) => (
+    <article className='max-w-[300px] p-4 space-y-4 border border-black/5 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900 backdrop-blur-2xl rounded-2xl overflow-hidden shadow-xl shadow-black/10 dark:shadow-black/80'>{children}</article>
+)
+
 const Preview = ({ children }) => (
-    <div className='w-full h-[150px] bg-white rounded-xl'></div>
+    <div className='w-full h-[150px] bg-zinc-200 dark:bg-zinc-800 rounded-xl'></div>
 )
 
 const Title = ({ children }) => (
     <h3 className='text-2xl font-bold leading-none'>{children}</h3>
-)
-
-const Project = ({ children }) => (
-    <article className='max-w-[300px] p-4 space-y-4 bg-slate-600/20 backdrop-blur-2xl rounded-2xl shadow-xl overflow-hidden'>{children}</article>
 )
 
 const Description = ({ children }) => (

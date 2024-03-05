@@ -45,11 +45,11 @@ export default function Resume() {
                 <section id="contact" className='flex flex-wrap justify-between py-2'>
                     <a className='flex flex-row items-center gap-2' href="https://www.linkedin.com/in/emmanuelhdz" target="_blank" rel="noreferrer">
                         <LinkedinIcon className="w-[16px] h-[16px]" />
-                        https://www.linkedin.com
+                        linkedin.com/in/emmanuelhdz
                     </a>
                     <a className='flex flex-row items-center gap-2' href="https://emmanuelhdz.com" target="_blank" rel="noreferrer">
                         <WebIcon className="w-[16px] h-[16px]" />
-                        https://emmanuelhdz.com
+                        emmanuelhdz.com
                     </a>
                     <a className='flex flex-row items-center gap-2' href="mailto:contact@emmanuelhdz.com">
                         <EmailIcon className="w-[16px] h-[16px]" />

@@ -1,4 +1,6 @@
 import './Work.css'
+import { useEffect, useState } from "react";
+import { createClient } from "@supabase/supabase-js";
 import { ReactComponent as YazakiIcon } from '../../assets/logos/companies/yazaki.svg'
 import { ReactComponent as DeloitteIcon } from '../../assets/logos/companies/deloitte.svg'
 import { ReactComponent as PythonIcon } from '../../assets/logos/technologies/python-color.svg'
@@ -10,6 +12,10 @@ import { ReactComponent as ReactIcon } from '../../assets/logos/technologies/rea
 import { ReactComponent as NextJSIcon } from '../../assets/logos/technologies/nextjs.svg'
 import { ReactComponent as DjangoIcon } from '../../assets/logos/technologies/django-color.svg'
 
+const SUPA_URL = import.meta.env.VITE_SUPA_URL
+const SUPA_KEY = import.meta.env.VITE_SUPA_KEY
+
+const supabase = createClient(SUPA_URL, SUPA_KEY)
 
 function CompanyLogoLabel({ LogoComponent, colorStyle = "fill-current" }) {
     return (
@@ -137,7 +143,28 @@ function WorkCard({ timeStr,
     )
 }
 
+async function getWorkExp(setWorkExp) {
+    const { data } = await supabase.from("work_exp").select()
+    setWorkExp(data)
+}
+
+
 function Work() {
+
+    const [workExp, setWorkExp] = useState([]);
+
+
+    useEffect(() => {
+        // run getWorkExp only if workExp is empty
+        if (workExp.length === 0) {
+            getWorkExp(setWorkExp)
+        }
+
+    }, [])
+
+
+    console.log(workExp)
+
 
     const workExpList = [
         {

@@ -1,54 +1,15 @@
-import { useRef, useState, useEffect } from 'react';
 import CompanyLogoLabel from './CompanyLogoLabel'
+import { ReactComponent as Yazaki } from '/src/assets/logos/companies/yazaki.svg'
+import { ReactComponent as Deloitte } from '/src/assets/logos/companies/deloitte.svg'
+import { ReactComponent as Zoolatech } from '/src/assets/logos/companies/zoolatech.svg'
 
-function useDynamicSVGImport(name, options = {}) {
-  const ImportedIconRef = useRef();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState();
-
-  const { onCompleted, onError } = options;
-  useEffect(() => {
-    setLoading(true);
-    const importIcon = async () => {
-      try {
-        ImportedIconRef.current = (
-          await import(`/src/assets/logos/companies/${name}.svg`)
-        ).ReactComponent;
-        if (onCompleted) {
-          onCompleted(name, ImportedIconRef.current);
-        }
-      } catch (err) {
-        if (onError) {
-          onError(err);
-        }
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    importIcon();
-  }, [name, onCompleted, onError]);
-
-  return { error, loading, SvgIcon: ImportedIconRef.current };
+const logos = {
+  "yazaki": Yazaki,
+  "deloitte": Deloitte,
+  "zoolatech": Zoolatech
 }
 
-export default function Icon({ name, onCompleted, onError }) {
-  const { error, loading, SvgIcon } = useDynamicSVGImport(name, {
-    onCompleted,
-    onError
-  });
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Failed to load icon: {error.message}</div>;
-  }
-
-  if (SvgIcon) {
-    return <CompanyLogoLabel LogoComponent={SvgIcon} />
-  }
-
-  return null
+export default function Icon({ name }) {
+  const LogoComponent = logos[name] || null;
+  return <CompanyLogoLabel LogoComponent={LogoComponent} />
 }

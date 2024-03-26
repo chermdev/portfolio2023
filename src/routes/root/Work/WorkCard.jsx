@@ -16,7 +16,10 @@ export default function WorkCard({
   tech = []
 }) {
   const startDate = moment(start, "YYYY-MM-DD").format("MMM YYYY")
-  const endDate = moment(end, "YYYY-MM-DD").format("MMM YYYY")
+  const endDate = end ? moment(end, "YYYY-MM-DD").format("MMM YYYY") : "Now"
+  if (!end) {
+    end = moment(moment.now()).format("YYYY-MM-DD")
+  }
   const timeDifference = moment(end, "YYYY-MM-DD").from(moment(start, "YYYY-MM-DD"), true)
   return (
     <li className={`overflow-hidden tracking-widest mb-10 ml-2 md:ml-16 rounded-lg ${active ? "border-2 border-teal-400 dark:border-cyan-400" : "border border-gray-300 dark:border-stone-800"}`}>
@@ -27,7 +30,7 @@ export default function WorkCard({
         }
         <div className='flex flex-col gap-4'>
           <div className='relative flex gap-2 md:gap-4 items-center whitespace-nowrap'>
-            <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-medium leading-none ${(active) ? "rounded-md px-2 bg-teal-500/10 text-teal-500 dark:text-cyan-400 dark:bg-cyan-400/10" : "text-gray-500 dark:text-gray-500"}`}>{startDate} - {endDate || "Now"} ({timeDifference})</time>
+            <time className={`px-2 py-1 text-xs sm:text-base xl:text-xl font-medium leading-none ${(active) ? "rounded-md px-2 bg-teal-500/10 text-teal-500 dark:text-cyan-400 dark:bg-cyan-400/10" : "text-gray-500 dark:text-gray-500"}`}>{startDate} - {endDate} ({timeDifference})</time>
             <div className='absolute right-0'>
               {<Icon name={logo} /> || company}
             </div>

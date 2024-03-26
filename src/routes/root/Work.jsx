@@ -1,9 +1,6 @@
 import './Work.css'
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
-import { ReactComponent as YazakiIcon } from '../../assets/logos/companies/yazaki.svg'
-import { ReactComponent as DeloitteIcon } from '../../assets/logos/companies/deloitte.svg'
-import CompanyLogoLabel from './Work/CompanyLogoLabel'
 import WorkCard from './Work/WorkCard'
 
 const SUPA_URL = import.meta.env.VITE_SUPA_URL
@@ -30,57 +27,6 @@ function Work() {
     }
 
   }, [])
-
-
-  console.log(workExpList)
-
-
-  // const workExpList = [
-  //   {
-  //     id: 1,
-  //     timeStr: "Jan 2021 - Now",
-  //     companyLogo: <>
-  //       <CompanyLogoLabel LogoComponent={DeloitteIcon} />
-  //     </>,
-  //     role: "Software Development Engineer in Test II",
-  //     description: "Create automated E2E user acceptance tests for an e-commerce web page, testing more than 30 locales in multiple languages using Python, Pytest, Selenium, Docker, Jenkins and API from Google:",
-  //     tasks: [
-  //       "Develop and maintain end-to-end regression tests.",
-  //       "Create new test cases based on client's new functionalities.",
-  //       "Keep tests up-to-date with page changes.",
-  //       "Develop custom pytest plugins to generate customized HTML and Excel reports.",
-  //       "Create Python scripts for various automation tasks, including converting tests from an Excel document into a CSV format compatible with Jira for test uploads.",
-  //       "Write documentation for framework installation and usage.",
-  //       "Create and manage Jira tests, test sets, test plans, and test executions.",
-  //       "Do manual testing when necessary to ensure product quality."
-  //     ],
-  //     technologies: [
-  //       "python", "selenium", "docker", "jenkins"
-  //     ],
-  //     active: true
-  //   },
-  //   {
-  //     id: 2,
-  //     timeStr: "Sept 2020 - Jan 2021",
-  //     companyLogo: <>
-  //       <CompanyLogoLabel LogoComponent={DeloitteIcon} />
-  //     </>,
-  //     role: "Embedded Automotive Test Engineer",
-  //     description: "Develop automated test scripts using the company's internal python framework for testing Instrument Panel Cluster (IPC). Do research and create documentation to help with tests development.",
-  //     active: false
-  //   },
-  //   {
-  //     id: 3,
-  //     timeStr: "June 2019 - Apr 2020",
-  //     companyLogo: <>
-  //       <CompanyLogoLabel LogoComponent={YazakiIcon} />
-  //     </>,
-  //     role: "Automotive Software Test Engineer",
-  //     description: "Test Automation Development for testing Instrument Panel Cluster (IPC) functionality using CAN protocol according to requirements from client (GM). Creation and run of test cases for IPC Indicators. Report and update procedure documentation according to the latest test case version and help the team doing problem-solving.",
-  //     active: false,
-  //     intern: true
-  //   }
-  // ]
 
   return (
     <section id="work" className="py-16 md:py-20 bg-bgcolor">

@@ -1,8 +1,7 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Icon from './Icon'
 import moment from 'moment'
 import TechnologyTags from './TechnologyTags'
-import CompanyLogoLabel from './CompanyLogoLabel'
 
 export default function WorkCard({
   company,

@@ -139,7 +139,7 @@ function Navbar() {
     )
 
     return (
-        <nav className={`w-screen fixed top-0 z-50 backdrop-blur-lg flex justify-center items-center font-medium`}>
+        <nav className={`w-screen sticky top-0 z-50 backdrop-blur-lg flex justify-center items-center font-medium`}>
             <div className={`w-[var(--max-navbar-width)] text-lg max-w-[max(var(--max-page-width))] overflow-hidden ${navbar ? "h-auto" : "h-12 md:h-16"}`}>
                 <div className='flex flex-row gap-3 md:gap-0 justify-between items-center h-12 md:h-16'>
                     <NavbarLogo />

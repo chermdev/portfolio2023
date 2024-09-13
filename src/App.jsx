@@ -1,29 +1,40 @@
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import { Outlet } from 'react-router-dom'
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { Outlet } from "react-router-dom";
 
 function NewPortfolioMessage() {
-    return (
-        <div className="flex flex-col sm:flex-row justify-center items-center bg-gradient-to-b from-green-400/20 to-green-600/20 text-white shadow-lg text-center p-4">
-            <div className='font-bold mb-4 mr-0 sm:mb-0 sm:mr-2 text-green-500 rounded-full px-2 border border-green-500 min-w-[9rem]'>
-                <div className='inline-block w-2 h-2 rounded-full bg-green-500 animate-pulse mr-2'></div>
-                <p className='inline-block'>Coming soon</p>
-            </div>
-            <p className="font-medium">New 2025 portfolio from scratch with</p>
-            <a href='https://astro.build/' className='underline ml-2 underline-offset-2 hover:underline-offset-4 transition-all'>🚀 Astro</a>
-        </div>
-    )
+  return (
+    <div className="relative flex flex-col sm:flex-row justify-center items-center bg-gradient-to-br from-blue-600  to-purple-600  text-white shadow-lg text-center p-4 overflow-hidden">
+      <p className="absolute -translate-x-10 sm:-translate-x-40 z-[2] scale-125 font-bold mr-0 sm:mr-2 text-transparent bg-clip-text bg-gradient-to-br from-blue-500/60 to-purple-500/60 text-5xl text-nowrap">
+        Coming soon
+      </p>
+      <p className="absolute translate-x-[10rem] sm:translate-x-[5rem] z-[1] scale-[2] font-bold mr-0 sm:mr-2 text-transparent bg-clip-text bg-gradient-to-br from-blue-700/60 to-purple-700/60 text-5xl text-nowrap">
+        Coming soon
+      </p>
+      <div className="z-[3]">
+        <p className="inline-block font-bold">
+          New 2025 portfolio from scratch with
+        </p>
+        <a
+          href="https://astro.build/"
+          className="inline-block underline ml-2 underline-offset-2 hover:underline-offset-4 transition-all font-bold"
+        >
+          🚀 Astro
+        </a>
+      </div>
+    </div>
+  );
 }
 
 function App() {
-    return (
-        <div>
-            <NewPortfolioMessage />
-            <Navbar />
-            <Outlet />
-            <Footer />
-        </div>
-    )
+  return (
+    <div>
+      <NewPortfolioMessage />
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

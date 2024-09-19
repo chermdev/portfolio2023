@@ -12,15 +12,19 @@ function NewPortfolioMessage() {
         Coming soon
       </p>
       <div className="z-[3]">
-        <p className="inline-block font-bold">
-          New 2025 portfolio from scratch with
+        <p className="inline-block text-balance font-medium">
+          <span className="font-semibold">Coming soon</span>
+          <br />
+          New 2025 portfolio under development from scratch with
+          <span>
+            <a
+              href="https://astro.build/"
+              className="inline-block underline ml-2 underline-offset-2 hover:underline-offset-4 transition-all"
+            >
+              🚀 Astro
+            </a>
+          </span>
         </p>
-        <a
-          href="https://astro.build/"
-          className="inline-block underline ml-2 underline-offset-2 hover:underline-offset-4 transition-all font-bold"
-        >
-          🚀 Astro
-        </a>
       </div>
     </div>
   );
